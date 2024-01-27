@@ -3,35 +3,9 @@ import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
-if (Astro.request.method === 'POST') {
-  const data = await Astro.request.formData();
-  console.log(data);
-  if (!data) return;
-  try {
-    const response = await fetch(`https://api.n3tz.dev/contact`, {
-      method: 'POST',
-      body: JSON.parse(`{
-      "name": "${data.get('name')}",
-      "email": "${data.get('email')}",
-        "company": "${data.get('company')}",
-        "message": "${data.get('textarea')}"      
-      }`),
-    });
-    console.log(response);
-    if (response.ok) {
-      console.log('Success!');
-    } else {
-      console.error('Something went wrong!');
-    }
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
-  }
-}
 ---
 
-<form method="POST">
+<form netlify netlify-honeypot name="feedback" method="POST" action="/success">
   {
     inputs &&
       inputs.map(

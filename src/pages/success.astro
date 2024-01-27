@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+const metadata = {
+  title: 'n3tz - Advanced Web Application Development & Digital Consulting',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+  <dotlottie-player
+    src="https://lottie.host/41b372a5-10e3-49ad-a1f8-38e822748c79/aLQOMobdrD.json"
+    background="transparent"
+    speed="1"
+    style="width: 100%; height: auto; max-width: 250px; max-height: 250px; margin: 0 auto;"
+    loop
+    autoplay></dotlottie-player>
+  <HeroText
+    tagline="Success"
+    title="Message sent!"
+    subtitle="Thank you for your message. We will get back to you shortly."
+  />
+</Layout>
