@@ -60,7 +60,7 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/n3tz' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/n3tz-ltd' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/n3tz_io' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/n3tz-io' },
   ],
   footNote: `
    \u00A92024 n3tz, Ltd. · All rights reserved.
