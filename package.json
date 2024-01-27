@@ -13,6 +13,7 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "dependencies": {
+    "@aarsteinmedia/dotlottie-player": "^2.4.0",
     "@astrojs/netlify": "^5.0.0",
     "@astrojs/node": "^8.1.0",
     "@astrojs/rss": "^4.0.2",
