@@ -1,0 +1,339 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import Content2 from '~/components/widgets/Content2.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import AboutUsImage from '~/assets/images/about-us.png';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import odinImg from '~/assets/images/odin.png';
+import statementImg from '~/assets/images/statement.png';
+import lendexeImg from '~/assets/images/lendexe.png';
+const metadata = {
+  title: 'n3tz - Desarrollo de aplicaciones web de gama alta',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero2
+    actions={[
+      {
+        variant: 'primary',
+        text: '¡Ponte en contacto ahora!',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Creación de <span class="text-accent highlight">aplicaciones web de gama alta</span> para soluciones empresariales
+      transformadoras
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Especializados en desarrollo web avanzado</span>, vamos más allá de la básica
+        básica. Nuestro equipo se dedica a construir aplicaciones web sofisticadas y totalmente funcionales diseñadas
+        para empresas que buscan tener un impacto significativo en línea. Con n3tz, eleve su empresa con soluciones web
+        que tan ambiciosas como su visión.</span
+      >
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <!--  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with n3tz"
+    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    items={[
+      {
+        title: 'Astro + Tailwind CSS Integration',
+        description:
+          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Ready-to-use Components',
+        description:
+          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Best Practices',
+        description:
+          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Excellent Page Speed',
+        description:
+          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Search Engine Optimization (SEO)',
+        description:
+          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Open to new ideas and contributions',
+        description:
+          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  /> -->
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    tagline="¿Quiénes somos?"
+    title="Acerca de n3tz"
+    image={{
+      src: AboutUsImage,
+      alt: 'n3tz team',
+    }}
+  >
+    <Fragment slot="content">
+      En n3tz, estamos redefiniendo los estándares del desarrollo de aplicaciones web. Nuestra misión es forjar alianzas
+      con empresas preparadas para una evolución digital significativa. Nos especializamos en ofrecer servicios
+      integrales de aplicaciones web que abarcan el diseño, la concepción, la implementación y la consultoría. Our focus
+      is on crafting robust, sophisticated web applications that cater to the unique needs of ambitious enterprises.
+      Entrust your digital digitales a n3tz , donde la precisión, la experiencia y la calidad sin precedentes definen
+      cada solución.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Content2
+    id="porfolio"
+    title="Experiencia de n3tz en aplicaciones web"
+    tagline="Lo que hemos hecho antes"
+    subtitle="Embárcate en un viaje de diseño que va más allá de los píxeles y entra en el reino de la imaginación. Explore mi portafolio, donde la pasión y la creatividad convergen para dar forma a apasionantes narrativas visuales."
+    isReversed
+    items={[
+      {
+        title: 'Lo que hicimos',
+        descripción:
+          'OdinBoost, un distinguido cliente nuestro, imaginó un centro de servicios de juego basado en web, seguro y de última generación, y nosotros le dimos vida. La plataforma, dirigida a jugadores ávidos, ofrece servicios de refuerzo para títulos populares como League of Legends, Valorant, TFT y Wild Rift. Las transacciones fluidas son la columna vertebral de la experiencia del usuario, facilitada por una plétora de métodos de pago: PayPal, PayOp, Coinbase y Stripe. Los jugadores pueden dar rienda suelta a su pasión, realizando compras sin esfuerzo, y sumergirse en un viaje de juego sin igual.',
+      },
+    ]}
+    image={{
+      src: odinImg,
+      alt: 'odinboost website',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Ir al proyecto',
+      icon: 'tabler:chevron-right',
+      href: 'https://odinboost.com',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OdinBoost <br /><span class="text-2xl">Tienda de servicios web personalizados</span>
+      </h3>
+    </Fragment>
+  </Content2>
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isAfterContent={true}
+    callToAction={{
+      target: '_blank',
+      text: 'Ir al proyecto',
+      icon: 'tabler:chevron-right',
+      href: 'https://lendexe.fi',
+    }}
+    items={[
+      {
+        title: 'Lo que hicimos',
+        descripción:
+          'En colaboración con LendeXe Finance, n3tz desempeñó un papel fundamental en la mejora de su plataforma DeFi. Nuestro cofundador dirigió el desarrollo del contrato inteligente utilizando Solidity, y nuestro equipo construyó un backend Node.js escalable y un sofisticado frontend React.js, elevando la experiencia general del usuario y mostrando nuestras capacidades en tecnología blockchain y desarrollo web.',
+      },
+    ]}
+    image={{
+      src: lendexeImg,
+      alt: 'lendexe finance platform',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        LendeXe Finance <br /><span class="text-2xl">Protocolo Web3 Lending DeFi</span>
+      </h3>
+    </Fragment>
+  </Content2>
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isReversed
+    callToAction={{
+      target: '_blank',
+      text: 'Ir al proyecto',
+      icon: 'tabler:chevron-right',
+      href: 'https://statement-clo.de',
+    }}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'What we did',
+        description:
+          'When statement.clo, a purveyor of unique and contemporary apparel, sought a digital facelift, we stepped in. In tandem with the client, we meticulously reimagined their online presence, focusing on user experience, site speed, and a streamlined checkout process. The results? Every collection drop post-redesign has witnessed a sell-out, translating to soaring sales and enhanced customer satisfaction.',
+      },
+    ]}
+    image={{
+      src: statementImg,
+      alt: 'statement clothing website',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Statement-Clothing <br /><span class="text-2xl">Tienda Shopify de diseño personalizado</span>
+      </h3>
+    </Fragment>
+  </Content2>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features
+    title="Cómo n3tz es su socio ideal en aplicaciones web"
+    subtitle="En n3tz, nos complace ofrecer soluciones digitales superiores que van más allá para nuestros clientes. Las siguientes son algunas justificaciones para elegirnos para su próximo proyecto:"
+    tagline="Nuestros ideales"
+    items={[
+      {
+        title: 'Empresa centrada',
+        description:
+          'Nuestro equipo está especializado en el desarrollo de aplicaciones web de alta gama, ofreciendo soluciones sofisticadas que satisfacen necesidades empresariales complejas.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'A la medida de su negocio',
+        description:
+          'Entendemos la singularidad de cada proyecto. Nuestro enfoque consiste en crear aplicaciones web personalizadas que se ajusten con precisión a los objetivos de su empresa',
+        icon: 'tabler:highlight',
+      },
+      {
+        title: 'Servicios integrales',
+        description:
+          'Desde el concepto hasta la finalización, nuestras ofertas de servicios integrales garantizan que cada aspecto de su aplicación web sea gestionado por expertos',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Innovación colaborativa',
+        description: 'Fusionamos sus ideas con nuestra experiencia tecnológica para crear aplicaciones web innovadoras',
+        icon: 'tabler:messages',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <!--   <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display n3tz documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.
+                `}
+  /> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that n3tz offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why n3tz?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  /> -->
+
+  <!-- Stats Widget ****************** -->
+
+  <!--   <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '¡Ponte en contacto ahora!',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estamos aquí para ayudarle a <span class="text-accent highlight">hacer crecer su negocio</span> y hacer realidad sus
+      ideas.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Somos un equipo de desarrolladores y diseñadores altamente profesionales a los que les encanta colaborar con
+        empresas y particulares ambiciosos y particulares ambiciosos para ayudarles a alcanzar sus objetivos. Estamos
+        aquí para ayudarle a hacer crecer su negocio y hacer que sus ideas cobren vida.
+      </span>
+    </Fragment>
+  </CallToAction>
+</Layout>

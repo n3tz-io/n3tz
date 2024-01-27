@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+const metadata = {
+  title: 'n3tz - Mensaje enviado con éxito',
+  ignoreTitleTemplate: true,
+  description: 'Gracias por su mensaje. Nos pondremos en contacto con usted en breve.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <dotlottie-player
+    src="https://lottie.host/69bc312f-81da-4216-ac73-26d7d7633fab/pxncAlxQDt.lottie"
+    background="transparent"
+    speed="1"
+    style="width: 100%; height: auto; max-width: 250px; max-height: 250px; margin: 0 auto;"
+    loop
+    autoplay></dotlottie-player>
+  <HeroText
+    tagline="Éxito"
+    title="¡Mensaje enviado!"
+    subtitle="Gracias por su mensaje. Nos pondremos en contacto con usted en breve."
+  />
+</Layout>

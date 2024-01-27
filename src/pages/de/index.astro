@@ -1,0 +1,230 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import Content2 from '~/components/widgets/Content2.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import AboutUsImage from '~/assets/images/about-us.png';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import odinImg from '~/assets/images/odin.png';
+import statementImg from '~/assets/images/statement.png';
+import lendexeImg from '~/assets/images/lendexe.png';
+const metadata = {
+  title: 'n3tz - Advanced Web Application Development & Digital Consulting',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero2
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kontakt',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight">High-End-Webanwendungen </span> für transformative Geschäftslösungen
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Spezialisiert auf fortgeschrittene Web-Entwicklung,</span> gehen wir über eine einfache
+        digitale Präsenz. Unser Team widmet sich der Entwicklung anspruchsvoller, voll funktionsfähiger Webanwendungen, die
+        für für Unternehmen, die online eine große Wirkung erzielen wollen. Mit n3tz können Sie Ihr Unternehmen mit Web-Lösungen
+        aufwerten, die die so ehrgeizig sind wie Ihre Vision.</span
+      >
+    </Fragment>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    tagline="Wer wir sind"
+    title="Über n3tz"
+    image={{
+      src: AboutUsImage,
+      alt: 'n3tz team',
+    }}
+  >
+    <Fragment slot="content">
+      Bei n3tz definieren wir die Standards für die Entwicklung von Webanwendungen neu. Unser Ziel ist es,
+      Partnerschaften mit mit Unternehmen, die eine bedeutende digitale Entwicklung anstreben. Wir sind spezialisiert
+      auf die Bereitstellung von End-to-End-Webanwendungen Dienstleistungen, die Design, Konzeption, Implementierung und
+      Beratung umfassen. Unser Fokus liegt auf der Entwicklung von robusten, anspruchsvollen Webanwendungen, die den
+      einzigartigen Bedürfnissen ambitionierter Unternehmen gerecht werden. Vertrauen Sie Ihre digitalen Projekte n3tz
+      an, wo Präzision, Fachwissen und unvergleichliche Qualität jede Lösung bestimmen.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Content2
+    id="porfolio"
+    title="Die n3tz-Kompetenz für Webanwendungen"
+    tagline="Was wir schon alles gemacht haben"
+    subtitle="Begeben Sie sich auf eine Designreise, die über die Pixel hinausgeht und in ein Reich der Fantasie führt. Entdecken Sie mein Portfolio, in dem Leidenschaft und Kreativität zusammenfließen, um fesselnde visuelle Geschichten zu gestalten."
+    isReversed
+    items={[
+      {
+        title: 'Was wir gemacht haben',
+        description:
+          'OdinBoost, ein angesehener Kunde von uns, hatte die Vision eines hochmodernen, sicheren, webbasierten Gaming-Service-Hubs, und wir haben sie zum Leben erweckt. Die Plattform richtet sich an begeisterte Spieler und bietet Boosting-Dienste für beliebte Titel wie League of Legends, Valorant, TFT und Wild Rift. Nahtlose Transaktionen sind das Rückgrat der Benutzererfahrung, die durch eine Fülle von Zahlungsmethoden erleichtert wird: PayPal, PayOp, Coinbase und Stripe. Die Spieler können ihrer Leidenschaft frönen, mühelos einkaufen und in ein unvergleichliches Spielerlebnis eintauchen.',
+      },
+    ]}
+    image={{
+      src: odinImg,
+      alt: 'odinboost website',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Zum Projekt',
+      icon: 'tabler:chevron-right',
+      href: 'https://odinboost.com',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OdinBoost <br /><span class="text-2xl">Maßgeschneiderter Webservice Shop</span>
+      </h3>
+    </Fragment>
+  </Content2>
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isAfterContent={true}
+    callToAction={{
+      target: '_blank',
+      text: 'Zum Projekt',
+      icon: 'tabler:chevron-right',
+      href: 'https://lendexe.fi',
+    }}
+    items={[
+      {
+        title: 'Was wir getan haben',
+        description:
+          'In Zusammenarbeit mit LendeXe Finance spielte n3tz eine entscheidende Rolle bei der Verbesserung ihrer DeFi-Plattform. Unser Mitbegründer leitete die Smart-Contract-Entwicklung mit Solidity, und unser Team baute ein skalierbares Node.js-Backend und ein ausgeklügeltes React.js-Frontend, was das gesamte Nutzererlebnis verbesserte und unsere Fähigkeiten in der Blockchain-Technologie und Web-Entwicklung unter Beweis stellte.',
+      },
+    ]}
+    image={{
+      src: lendexeImg,
+      alt: 'lendexe finance platform',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        LendeXe Finance <br /><span class="text-2xl">Web3 Lending DeFi Protokoll</span>
+      </h3>
+    </Fragment>
+  </Content2>
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isReversed
+    callToAction={{
+      target: '_blank',
+      text: 'Zum Projekt',
+      icon: 'tabler:chevron-right',
+      href: 'https://statement-clo.de',
+    }}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Was wir getan haben',
+        description:
+          'Als statement.clo, ein Anbieter von einzigartiger und moderner Kleidung, ein digitales Facelifting benötigte, kamen wir ins Spiel. Gemeinsam mit dem Kunden haben wir die Online-Präsenz sorgfältig überarbeitet und uns dabei auf die Benutzerfreundlichkeit, die Geschwindigkeit der Website und einen optimierten Bestellvorgang konzentriert. Das Ergebnis? Jede Kollektion, die nach der Neugestaltung auf den Markt kam, war ausverkauft, was sich in steigenden Umsätzen und erhöhter Kundenzufriedenheit niederschlug.',
+      },
+    ]}
+    image={{
+      src: statementImg,
+      alt: 'statement clothing website',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Statement-Clothing <br /><span class="text-2xl">Individuell gestalteter Shopify Shop</span>
+      </h3>
+    </Fragment>
+  </Content2>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features
+    title="Wie n3tz Ihr idealer Partner für Webanwendungen ist"
+    subtitle="Wir bei n3tz freuen uns, unseren Kunden überdurchschnittliche digitale Lösungen anbieten zu können, die weit über das normale Maß hinausgehen. Im Folgenden finden Sie einige Gründe, warum Sie uns für Ihr nächstes Projekt auswählen sollten:"
+    tagline="Unsere Ideale"
+    items={[
+      {
+        title: 'Fokussiertes Unternehmen',
+        description:
+          'Unser Team ist auf die Entwicklung von High-End-Webanwendungen spezialisiert und bietet anspruchsvolle Lösungen für komplexe Geschäftsanforderungen.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Maßgeschneidert für Ihr Unternehmen',
+        description:
+          'Wir verstehen die Einzigartigkeit eines jeden Projekts. Unser Ansatz ist es, maßgeschneiderte Webanwendungen zu entwickeln, die genau auf Ihre Geschäftsziele abgestimmt sind.',
+        icon: 'tabler:highlight',
+      },
+      {
+        title: 'Umfassende Dienstleistungen',
+        description:
+          'Vom Konzept bis zur Fertigstellung, unser Full-Service-Angebot stellt sicher, dass jeder Aspekt Ihrer Webanwendung fachmännisch behandelt wird.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Kollaborative Innovation',
+        description: 'Wir verbinden Ihre Ideen mit unserem technischen Fachwissen zu bahnbrechenden Webanwendungen.',
+        icon: 'tabler:messages',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schreiben Sie uns jetzt!',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Wir helfen Ihnen <span class="text-accent highlight">Ihr Unternehmen zu vergrößern</span> und Ihre Ideen zum Leben
+      zu erwecken.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Wir sind ein Team von hochprofessionellen Entwicklern und Designern, die gerne mit ambitionierten Unternehmen
+        und Einzelpersonen zusammenarbeiten und Einzelpersonen zusammenarbeiten, um ihnen zu helfen, ihre Ziele zu
+        erreichen. Wir sind hier, um Ihnen zu helfen, Ihr Unternehmen zu vergrößern und Ihre Ideen zum Leben zu
+        erwecken.
+      </span>
+    </Fragment>
+  </CallToAction>
+</Layout>

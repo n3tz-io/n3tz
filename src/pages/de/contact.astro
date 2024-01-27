@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Kontakt',
+  description: 'Kontaktieren Sie n3tz für Support, Verkauf oder individuelle Lösungen.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Kontakt" title="Kontaktieren Sie uns!" />
+
+  <ContactUs
+    subtitle="Wir sind hier, um zu helfen! Kontaktieren Sie uns mit allen Fragen oder Anfragen. Wir freuen uns darauf, von Ihnen zu hören."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name*',
+        required: true,
+        placeholder: 'John Doe',
+      },
+      {
+        type: 'text',
+        name: 'company',
+        label: 'Firma',
+        placeholder: 'n3tz',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'E-Mail*',
+        required: true,
+        placeholder: 'john@n3tz.io',
+      },
+    ]}
+    textarea={{
+      label: 'Nachricht*',
+      placeholder: 'Geben Sie hier Ihre Nachricht ein...',
+      required: true,
+    }}
+    disclaimer={{
+      required: true,
+      label:
+        'Mit dem Absenden dieses Kontaktformulars stimmen Sie der Speicherung Ihrer persönlichen Informationen zu.',
+    }}
+    description="Sie erhalten innerhalb von 24 Stunden eine Antwort."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Engagierte Unterstützung bei jedem Schritt"
+    items={[
+      {
+        title: 'Kundenbetreuung',
+        description:
+          'Wenden Sie sich an uns, wenn Sie Hilfe beim Projektmanagement benötigen, unsere Dienstleistungen verstehen möchten, Fragen zur Rechnungsstellung haben oder allgemeine Fragen zu den Angeboten von n3tz haben.',
+      },
+      {
+        title: 'Vertrieb & kundenspezifische Lösungen',
+        description:
+          'Besprechen Sie Ihre spezifischen Projektanforderungen, erkunden Sie Anpassungsmöglichkeiten, erfahren Sie mehr über unseren Entwicklungsprozess, oder erkundigen Sie sich nach Angeboten und Zeitplänen.',
+      },
+      {
+        title: 'Technischer Support',
+        description:
+          'Wenden Sie sich an uns, wenn Sie technische Unterstützung bei Webanwendungen, Fehlerbehebung, Kompatibilitätsproblemen oder anderen Herausforderungen im Zusammenhang mit unseren digitalen Lösungen benötigen.',
+      },
+    ]}
+  />
+</Layout>

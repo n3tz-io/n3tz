@@ -2,7 +2,10 @@
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import type { CallToAction } from '~/types';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const {
   variant = 'secondary',
   target,
@@ -10,6 +13,8 @@ const {
   icon = '',
   class: className = '',
   type,
+  href = '',
+  translate = false,
   ...rest
 } = Astro.props as CallToAction;
 
@@ -24,16 +29,17 @@ const variants = {
 {
   type === 'button' || type === 'submit' || type === 'reset' ? (
     <button type={type} class={twMerge(variants[variant] || '', className)} {...rest}>
-      <Fragment set:html={text} />
+      <Fragment href={`${lang != 'en' ? '/' + lang : '/'}`} set:html={translate ? t(text) : text} />
       {icon && <Icon name={icon} class="w-5 h-5 ml-1 -mr-1.5 rtl:mr-1 rtl:-ml-1.5 inline-block" />}
     </button>
   ) : (
     <a
       class={twMerge(variants[variant] || '', className)}
       {...(target ? { target: target, rel: 'noopener noreferrer' } : {})}
+      href={href.includes('https://') ? href : `${lang != 'en' ? '/' + lang + href : href}`}
       {...rest}
     >
-      <Fragment set:html={text} />
+      <Fragment set:html={translate ? t(text) : text} />
       {icon && <Icon name={icon} class="w-5 h-5 ml-1 -mr-1.5 rtl:mr-1 rtl:-ml-1.5 inline-block" />}
     </a>
   )

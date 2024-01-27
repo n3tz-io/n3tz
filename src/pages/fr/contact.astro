@@ -1,0 +1,73 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+  description: 'Contactez n3tz pour le support, les ventes ou les solutions personnalisées.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Contact" title="Connectons-nous !" />
+
+  <ContactUs
+    subtitle="Nous sommes là pour vous aider ! Contactez-nous pour toute question ou demande. Nous avons hâte de vous entendre."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nom*',
+        required: true,
+        placeholder: 'John Doe',
+      },
+      {
+        type: 'text',
+        name: 'company',
+        label: 'Société',
+        placeholder: 'n3tz',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email*',
+        required: true,
+        placeholder: 'john@n3tz.io',
+      },
+    ]}
+    textarea={{
+      label: 'Message*',
+      placeholder: 'Tapez votre message ici...',
+      required: true,
+    }}
+    disclaimer={{
+      required: true,
+      label:
+        'En soumettant ce formulaire de contact, vous reconnaissez et acceptez la collecte de vos informations personnelles.',
+    }}
+    description="Vous recevrez une réponse dans les 24 heures."
+  />
+
+  <Features2
+    title="Support dédié à chaque étape"
+    items={[
+      {
+        title: 'Assistance client',
+        description:
+          "Connectez-vous avec nous pour obtenir de l'aide pour la gestion de projets, comprendre nos services, les demandes de facturation ou les questions générales sur les offres de n3tz.",
+      },
+      {
+        title: 'Ventes & Solutions personnalisées',
+        description:
+          'Discutez de vos besoins spécifiques de projet, explorez les possibilités de personnalisation, apprenez-en plus sur notre processus de développement ou demandez des devis et des délais.',
+      },
+      {
+        title: 'Support technique',
+        description:
+          "Contactez-nous pour obtenir de l'aide technique avec les applications web, le dépannage, les problèmes de compatibilité ou tout défi que vous rencontrez avec nos solutions numériques.",
+      },
+    ]}
+  />
+</Layout>

@@ -10,7 +10,7 @@
     background-color: var(--aw-color-bg-page-dark);
   }
   .bg-light {
-    background-color: var(--aw-color-bg-page);
+    background-color: var(--aw-color-bg-page-light);
   }
   .text-page {
     color: var(--aw-color-text-page);

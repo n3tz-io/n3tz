@@ -28,7 +28,7 @@ export const headerData = {
       ],
     },
   ], */
-  actions: [{ text: 'Contact', href: '/contact' }],
+  actions: [{ text: 'action.contact', href: '/contact', translate: true }],
 };
 
 export const footerData = {
@@ -37,11 +37,11 @@ export const footerData = {
       title: 'Pages',
       links: [
         {
-          text: 'Home Page',
+          text: 'nav.home',
           href: '/',
         },
         {
-          text: 'Contact Us',
+          text: 'nav.contact',
           href: '/contact',
         },
       ],

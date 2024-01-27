@@ -1,0 +1,161 @@
+---
+import { languages, locales } from '~/i18n/ui';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import { Icon } from 'astro-icon/components';
+
+const lang = getLangFromUrl(Astro.url);
+const initLocale = new Intl.Locale(lang);
+const initLang = new Intl.DisplayNames([lang], { type: 'language' }).of(initLocale.language);
+export interface Props {
+  id?: string;
+  defaultLang?: string;
+  flagSelector?: boolean;
+}
+
+const { id = 'language-picker', defaultLang = 'en', flagSelector = false } = Astro.props;
+function getFlagSrc(countryCode) {
+  if (countryCode === 'en') countryCode = 'us';
+  return `https://flagsapi.com/${countryCode.toUpperCase()}/flat/32.png`;
+}
+---
+
+{
+  flagSelector ? (
+    <div class="dropdown p-2.5" tab-index="0">
+      <button
+        id="dropdown-btn"
+        class=" hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+      >
+        <img alt={`${lang} flag`} src={getFlagSrc(lang)} />
+        {initLang}
+        <Icon name="tabler:chevron-down" class="w-3 h-3" />
+      </button>
+      <ul class="dropdown-content bg-dark dark:bg-light dark:text-black text-white " id="dropdown-content">
+        {locales
+          .filter((loc) => loc !== lang)
+          .map((locale) => {
+            const intlLocale = new Intl.Locale(locale);
+            const langName = new Intl.DisplayNames([locale], { type: 'language' }).of(intlLocale.language);
+            return (
+              <li
+                id={`locale-${locale}`}
+                class="flex items-center justify-around p-2.5 hover:bg-gray-700 dark:hover:bg-gray-100"
+              >
+                <img alt={`${langName} flag`} src={getFlagSrc(locale)} />
+                {langName}
+              </li>
+            );
+          })}
+      </ul>
+    </div>
+  ) : (
+    <ul>
+      {Object.entries(languages).map(([lang, label]) => (
+        <li>
+          <a href={`/${lang != 'en' ? lang : ''}`}>{label}</a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<script>
+  const locales = ['en', 'fr', 'es', 'de'];
+
+  function getFlagSrc(countryCode) {
+    if (countryCode === 'en') countryCode = 'us';
+    return `https://flagsapi.com/${countryCode.toUpperCase()}/flat/32.png`;
+  }
+
+  function setSelectedLocale(locale) {
+    const intlLocale = new Intl.Locale(locale);
+    const langName = new Intl.DisplayNames([locale], {
+      type: 'language',
+    }).of(intlLocale.language);
+
+    const otherLocales = locales.filter((loc) => loc !== locale);
+    otherLocales.forEach((otherLocale) => {
+      const otherIntlLocale = new Intl.Locale(otherLocale);
+      const otherLangName = new Intl.DisplayNames([otherLocale], {
+        type: 'language',
+      }).of(otherIntlLocale.language);
+      const listEl = document.querySelector(`#locale-${otherLocale}`);
+      listEl.addEventListener('mousedown', function () {
+        window.location.href = `/${otherLocale !== 'en' ? otherLocale : ''}`;
+      });
+    });
+  }
+  setSelectedLocale(window.location.pathname.split('/')[1] || locales[0]);
+</script>
+<style>
+  .dropdown button {
+    min-width: 130px;
+    width: max-content;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    justify-content: space-evenly;
+  }
+  .dropdown button img {
+    margin: 0 5px 0 0;
+  }
+  .dropdown button img,
+  .dropdown-content li img {
+    width: 28px;
+  }
+  .dropdown button,
+  .dropdown-content li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .dropdown button:hover {
+    cursor: pointer;
+  }
+  /* Style for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin: 1px 0 0 0;
+    padding: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    max-height: 315px;
+  }
+  /* Style for the dropdown content items */
+  .dropdown-content li {
+    text-decoration: none;
+    justify-content: end;
+  }
+  .dropdown-content li img {
+    margin: 0 20px 0px 20px;
+  }
+  /* Style for the dropdown content items on hover */
+  .dropdown-content li:hover {
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  /* Show the dropdown content when the dropdown button is clicked */
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  /* Animate the dropdown content */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .dropdown-content {
+    animation: slideIn 0.3s ease-out;
+  }
+</style>

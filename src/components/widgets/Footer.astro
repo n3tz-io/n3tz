@@ -2,7 +2,12 @@
 import { Icon } from 'astro-icon/components';
 import { SITE } from '~/utils/config';
 import { getHomePermalink } from '~/utils/permalinks';
+import LanguagePicker from '../LanguagePicker.astro';
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 interface Link {
   text?: string;
   href?: string;
@@ -32,15 +37,15 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+          <a class="inline-block font-bold text-xl" href={`${lang != 'en' ? '/' + lang : '/'}`}>{SITE?.name}</a>
         </div>
         <div class="text-sm text-muted">
           {
             secondaryLinks.map(({ text, href }) => (
               <a
                 class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out mr-2 rtl:mr-0 rtl:ml-2"
-                href={href}
-                set:html={text}
+                href={`${lang != 'en' ? lang : ''}${href}`}
+                set:html={t(text)}
               />
             ))
           }
@@ -56,10 +61,10 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
                   <li class="mb-2">
                     <a
                       class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={href}
+                      href={`${lang != 'en' ? '/' + lang + href : href}`}
                       aria-label={ariaLabel}
                     >
-                      <Fragment set:html={text} />
+                      <Fragment set:html={t(text)} />
                     </a>
                   </li>
                 ))}
@@ -68,6 +73,10 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           </div>
         ))
       }
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="dark:text-gray-300 font-medium mb-2">{t('nav.languages')}</div>
+        <LanguagePicker />
+      </div>
     </div>
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       {
@@ -81,7 +90,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
                   href={href}
                 >
                   {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
+                  <Fragment set:html={t(text)} />
                 </a>
               </li>
             ))}

@@ -23,7 +23,12 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'static',
+  output: 'server',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es', 'fr', 'de'],
+    path: './src/locales',
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
