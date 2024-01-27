@@ -5,7 +5,7 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
 ---
 
-<form netlify netlify-honeypot name="feedback" method="POST" action="/success">
+<form netlify netlify-honeypot name="contact" method="POST" action="/success">
   {
     inputs &&
       inputs.map(
