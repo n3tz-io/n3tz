@@ -16,5 +16,6 @@
   },
   "yaml.schemas": {
     "./.vscode/astrowind/config-schema.json": "/src/config.yaml"
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
