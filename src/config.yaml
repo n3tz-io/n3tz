@@ -11,7 +11,7 @@ metadata:
   title:
     default: n3tz
     template: '%s — n3tz'
-  description: 'Specializing in high-end web application development, n3tz offers bespoke digital solutions that cater to sophisticated business needs. Our expertise spans from initial design to full implementation, ensuring your digital strategy is cutting-edge. Partner with n3tz for unparalleled web applications and digital consulting.'
+  description: 'Specializing in high-end web application development, n3tz offers bespoke digital solutions that cater to sophisticated business needs. Our expertise spans from initial design to full implementation, ensuring your digital strategy is cutting-edge.'
   robots:
     index: true
     follow: true
