@@ -3,9 +3,35 @@ import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  console.log(data);
+  if (!data) return;
+  try {
+    const response = await fetch(`https://api.n3tz.dev/contact`, {
+      method: 'POST',
+      body: JSON.parse(`{
+      "name": "${data.get('name')}",
+      "email": "${data.get('email')}",
+        "company": "${data.get('company')}",
+        "message": "${data.get('textarea')}"      
+      }`),
+    });
+    console.log(response);
+    if (response.ok) {
+      console.log('Success!');
+    } else {
+      console.error('Something went wrong!');
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
-<form>
+<form method="POST">
   {
     inputs &&
       inputs.map(
@@ -22,6 +48,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 name={name}
                 id={name}
                 autocomplete={autocomplete}
+                required={name !== 'company' ? true : false}
                 placeholder={placeholder}
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
@@ -39,6 +66,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
         <textarea
           id="textarea"
           name="textarea"
+          required
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
@@ -53,6 +81,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
         <div class="flex mt-0.5">
           <input
             id="disclaimer"
+            required
             name="disclaimer"
             type="checkbox"
             class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
@@ -70,7 +99,9 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="primary" type="submit">{button}</Button>
+        <Button variant="primary" type="submit">
+          {button}
+        </Button>
       </div>
     )
   }

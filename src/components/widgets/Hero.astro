@@ -66,26 +66,17 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      <div>
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
+      <div class="basis-1/2">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"
+        ></script>
+
+        <dotlottie-player
+          src="https://lottie.host/fd66ee86-0141-43ef-a3ca-6fe5ae89599f/fUwtrppn96.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: auto; max-width: 750px; max-height: 750px;"
+          loop
+          autoplay></dotlottie-player>
       </div>
     </div>
   </div>

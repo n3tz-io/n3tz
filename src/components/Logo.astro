@@ -1,7 +1,14 @@
 ---
-import { SITE } from '~/utils/config';
+import Image from '~/components/common/Image.astro';
 ---
 
-<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  🚀 {SITE?.name}
-</span>
+<Image
+  class="mx-auto w-full rounded-lg"
+  width={50}
+  height={50}
+  widths={[50, 100]}
+  sizes="(max-width: 640px) 50px, 100px"
+  layout="responsive"
+  alt="Logo of n3tz"
+  src="~/assets/images/logo.png"
+/>

@@ -1,5 +1,4 @@
 ---
-import Image from '~/components/common/Image.astro';
 import type { CallToAction } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
@@ -9,7 +8,6 @@ export interface Props {
   tagline?: string;
   content?: string;
   actions?: string | CallToAction[];
-  image?: string | any; // TODO: find HTMLElementProps
 }
 
 const {
@@ -18,7 +16,6 @@ const {
   tagline,
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
 } = Astro.props;
 ---
 
@@ -27,6 +24,18 @@ const {
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
+      <div class="basis-1/2">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"
+        ></script>
+
+        <dotlottie-player
+          src="https://lottie.host/fd66ee86-0141-43ef-a3ca-6fe5ae89599f/fUwtrppn96.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: auto; max-width: 750px; max-height: 750px;"
+          loop
+          autoplay></dotlottie-player>
+      </div>
       <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
         {
           tagline && (
@@ -64,27 +73,6 @@ const {
           }
         </div>
         {content && <Fragment set:html={content} />}
-      </div>
-      <div class="basis-1/2">
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={600}
-                  height={600}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
       </div>
     </div>
   </div>
