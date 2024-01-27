@@ -37,7 +37,7 @@ export const footerData = {
       title: 'Pages',
       links: [
         {
-          text: 'Home',
+          text: 'Home Page',
           href: '/',
         },
         {
