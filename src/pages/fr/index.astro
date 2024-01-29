@@ -125,96 +125,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
-  <Content2
-    id="porfolio"
-    title="Présentation de l'expertise de n3tz en matière d'applications Web"
-    tagline="Ce que nous avons déjà fait"
-    subtitle="Embarquez pour un voyage de conception qui dépasse les pixels, en entrant dans le royaume de l'imagination. Explorez mon portfolio, où la passion et la créativité convergent pour façonner des récits visuels captivants."
-    isReversed
-    items={[
-      {
-        title: 'Ce que nous avons fait',
-        description:
-          "OdinBoost, l'un de nos clients distingués, a imaginé un centre de services de jeux en ligne sécurisé et à la pointe de la technologie, et nous l'avons concrétisé. S'adressant aux joueurs passionnés, la plateforme offre des services de boosting pour des titres populaires tels que League of Legends, Valorant, TFT et Wild Rift. Les transactions transparentes constituent l'épine dorsale de l'expérience utilisateur, facilitée par une pléthore de méthodes de paiement : PayPal, PayOp, Coinbase et Stripe. Les joueurs peuvent s'adonner à leur passion, faire des achats sans effort et s'immerger dans un voyage de jeu inégalé",
-      },
-    ]}
-    image={{
-      src: odinImg,
-      alt: 'odinboost website',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://odinboost.com',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        OdinBoost <br /><span class="text-2xl">Boutique de services Web personnalisés</span>
-      </h3>
-    </Fragment>
-  </Content2>
-  <!-- Content Widget **************** -->
-
-  <Content2
-    isAfterContent={true}
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://lendexe.fi',
-    }}
-    items={[
-      {
-        title: 'Ce que nous avons fait',
-        description:
-          "En collaboration avec LendeXe Finance, n3tz a joué un rôle central dans l'amélioration de leur plateforme DeFi. Notre cofondateur a dirigé le développement du contrat intelligent en utilisant Solidity, et notre équipe a construit un backend Node.js évolutif et un frontend React.js sophistiqué, élevant l'expérience utilisateur globale et mettant en valeur nos capacités en matière de technologie blockchain et de développement web.",
-      },
-    ]}
-    image={{
-      src: lendexeImg,
-      alt: 'lendexe finance platform',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        LendeXe Finance <br /><span class="text-2xl">Protocole Web3 Lending DeFi</span>
-      </h3>
-    </Fragment>
-  </Content2>
-  <!-- Content Widget **************** -->
-
-  <Content2
-    isReversed
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://statement-clo.de',
-    }}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Ce que nous avons fait',
-        description:
-          "Lorsque statement.clo, un fournisseur de vêtements uniques et contemporains, a cherché à se refaire une beauté numérique, nous sommes intervenus. En tandem avec le client, nous avons méticuleusement réimaginé leur présence en ligne, en nous concentrant sur l'expérience utilisateur, la vitesse du site et un processus de paiement simplifié. Les résultats ? Chaque collection déposée après la refonte a été vendue à guichets fermés, ce qui s'est traduit par une hausse des ventes et une amélioration de la satisfaction des clients",
-      },
-    ]}
-    image={{
-      src: statementImg,
-      alt: 'statement clothing website',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Statement-Clothing <br /><span class="text-2xl">Custom Design Shopify Shop</span>
-      </h3>
-    </Fragment>
-  </Content2>
-
   <!-- Features2 Widget ************** -->
 
   <Features
@@ -247,11 +157,109 @@ const metadata = {
         icon: 'tabler:messages',
       },
     ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Content2
+    id="portfolio"
+    title="Présentation de l'expertise de n3tz en matière d'applications Web"
+    tagline="Ce que nous avons déjà fait"
+    subtitle="Embarquez pour un voyage de conception qui dépasse les pixels, en entrant dans le royaume de l'imagination. Explorez mon portfolio, où la passion et la créativité convergent pour façonner des récits visuels captivants."
+    isReversed
+    items={[
+      {
+        title: 'Ce que nous avons fait',
+        description:
+          "OdinBoost, l'un de nos clients distingués, a imaginé un centre de services de jeux en ligne sécurisé et à la pointe de la technologie, et nous l'avons concrétisé. S'adressant aux joueurs passionnés, la plateforme offre des services de boosting pour des titres populaires tels que League of Legends, Valorant, TFT et Wild Rift. Les transactions transparentes constituent l'épine dorsale de l'expérience utilisateur, facilitée par une pléthore de méthodes de paiement : PayPal, PayOp, Coinbase et Stripe. Les joueurs peuvent s'adonner à leur passion, faire des achats sans effort et s'immerger dans un voyage de jeu inégalé",
+      },
+    ]}
+    image={{
+      src: odinImg,
+      alt: 'odinboost website',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Aller au projet',
+      icon: 'tabler:chevron-right',
+      href: 'https://odinboost.com',
+    }}
   >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OdinBoost <br /><span class="text-2xl">Boutique de services Web personnalisés</span>
+      </h3>
+    </Fragment>
+
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features>
+  </Content2>
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isAfterContent={true}
+    callToAction={{
+      target: '_blank',
+      text: 'Aller au projet',
+      icon: 'tabler:chevron-right',
+      href: 'https://lendexe.fi',
+    }}
+    items={[
+      {
+        title: 'Ce que nous avons fait',
+        description:
+          "En collaboration avec LendeXe Finance, n3tz a joué un rôle central dans l'amélioration de leur plateforme DeFi. Notre cofondateur a dirigé le développement du contrat intelligent en utilisant Solidity, et notre équipe a construit un backend Node.js évolutif et un frontend React.js sophistiqué, élevant l'expérience utilisateur globale et mettant en valeur nos capacités en matière de technologie blockchain et de développement web.",
+      },
+    ]}
+    image={{
+      src: lendexeImg,
+      alt: 'lendexe finance platform',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        LendeXe Finance <br /><span class="text-2xl">Protocole Web3 Lending DeFi</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+  <!-- Content Widget **************** -->
+
+  <Content2
+    isReversed
+    callToAction={{
+      target: '_blank',
+      text: 'Aller au projet',
+      icon: 'tabler:chevron-right',
+      href: 'https://statement-clo.de',
+    }}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Ce que nous avons fait',
+        description:
+          "Lorsque statement.clo, un fournisseur de vêtements uniques et contemporains, a cherché à se refaire une beauté numérique, nous sommes intervenus. En tandem avec le client, nous avons méticuleusement réimaginé leur présence en ligne, en nous concentrant sur l'expérience utilisateur, la vitesse du site et un processus de paiement simplifié. Les résultats ? Chaque collection déposée après la refonte a été vendue à guichets fermés, ce qui s'est traduit par une hausse des ventes et une amélioration de la satisfaction des clients",
+      },
+    ]}
+    image={{
+      src: statementImg,
+      alt: 'statement clothing website',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Statement-Clothing <br /><span class="text-2xl">Custom Design Shopify Shop</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -265,44 +273,44 @@ const metadata = {
 
   <!-- FAQs Widget ******************* -->
 
-  <!-- <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that n3tz offers and how it can elevate your web development journey."
+  <FAQs
+    title="Questions Fréquemment Posées"
+    subtitle="Plongez dans les questions suivantes pour découvrir les puissantes fonctionnalités que n3tz offre et comment cela peut enrichir votre parcours de développement web."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why n3tz?',
+        title: 'Qui est n3tz et que fait n3tz ?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "n3tz est une entreprise dynamique de développement web spécialisée dans la création d'applications web haut de gamme. Nous nous concentrons sur le développement de solutions web sophistiquées et fonctionnelles pour les entreprises cherchant à avoir un impact significatif en ligne. Nos services vont du développement web avancé à la consultation digitale complète.",
       },
       {
-        title: 'What do I need to start?',
+        title: "Qu'est-ce qui distingue n3tz dans l'industrie du développement web ?",
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          "Ce qui distingue n3tz, c'est notre engagement à fournir des services d'application web de bout en bout qui ne sont pas seulement techniquement solides, mais aussi stratégiquement alignés avec les objectifs commerciaux de nos clients. Nous sommes fiers de créer des solutions web uniques combinant innovation, efficacité et évolutivité.",
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'n3tz peut-il développer des applications web pour des industries ou niches spécifiques ?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Oui, n3tz possède une expertise dans le développement d'applications web pour une variété d'industries et de niches. Que ce soit pour la finance, le jeu, le commerce électronique ou tout autre secteur, nous adaptons nos solutions aux défis et exigences uniques de chaque industrie.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Comment n3tz assure-t-il la sécurité et la protection des données de ses applications web ?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Chez n3tz, la sécurité et la protection des données sont primordiales. Nous intégrons des protocoles de sécurité robustes, y compris le cryptage SSL et les intégrations de paiement sécurisées, et assurons la conformité avec les réglementations sur la protection des données. Notre engagement est de fournir des solutions web sûres et fiables.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: "Sur quelles technologies n3tz se spécialise-t-il pour le développement d'applications web ?",
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "Notre équipe maîtrise une gamme de technologies modernes essentielles au développement d'applications web de pointe, y compris Node.js, React.js, et des technologies blockchain telles que Solidity pour les contrats intelligents. Cette polyvalence technique nous permet de construire des solutions web diversifiées et innovantes.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Comment n3tz gère-t-il le processus de développement web du début à la fin ?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "Notre processus est complet et collaboratif, commençant par comprendre votre vision, en passant par la phase de développement, et jusqu'au déploiement final. Nous maintenons une communication ouverte avec les clients, fournissant des mises à jour et intégrant des retours pour garantir que le produit final répond à leurs attentes.",
       },
     ]}
-  /> -->
+  />
 
   <!-- Stats Widget ****************** -->
 
@@ -339,6 +347,10 @@ const metadata = {
         à atteindre leurs objectifs. Nous sommes là pour vous aider à développer votre activité et à donner vie à vos
         idées. prendre vie.
       </span>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </CallToAction>
 </Layout>

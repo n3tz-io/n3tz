@@ -83,8 +83,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         'self-center flex flex items-center mb-0 w-full w-auto static justify-end p-0',
       ]}
     >
-      <div class="items-center flex justify-end">
-        <div class="flex">
+      <div class="items-center flex justify-end gap-2">
           <LanguagePicker flagSelector />
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 inline-block" />}
           {
@@ -98,12 +97,11 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               </a>
             )
           }
-        </div>
         {
           actions?.length ? (
-            <span class="ml-4 rtl:ml-0 rtl:mr-4">
+            <span class="rtl:ml-0 rtl:mr-4">
               {actions.map((btnProps) => (
-                <Button {...btnProps} class="ml-2 py-2.5 px-5.5 font-semibold shadow-none text-sm w-auto" />
+                <Button {...btnProps} class="py-2.5 px-5.5 font-semibold shadow-none text-sm w-auto" />
               ))}
             </span>
           ) : (

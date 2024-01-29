@@ -1,11 +1,15 @@
 ---
 import { languages, locales } from '~/i18n/ui';
-import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import { getLangFromUrl} from '~/i18n/utils';
 import { Icon } from 'astro-icon/components';
 
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 const lang = getLangFromUrl(Astro.url);
 const initLocale = new Intl.Locale(lang);
-const initLang = new Intl.DisplayNames([lang], { type: 'language' }).of(initLocale.language);
+const initLang = capitalizeFirstLetter(new Intl.DisplayNames([lang], {type: 'language',}).of(initLocale.language));
 export interface Props {
   id?: string;
   defaultLang?: string;
@@ -21,38 +25,36 @@ function getFlagSrc(countryCode) {
 
 {
   flagSelector ? (
-    <div class="dropdown p-2.5" tab-index="0">
+    <div class="dropdown p-3" tabindex="0">
       <button
         id="dropdown-btn"
-        class=" hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+        class="dropdown-button"
       >
         <img alt={`${lang} flag`} src={getFlagSrc(lang)} />
         {initLang}
-        <Icon name="tabler:chevron-down" class="w-3 h-3" />
+        <Icon name="tabler:chevron-down" class="w-4 h-4 ml-2" />
       </button>
-      <ul class="dropdown-content bg-dark dark:bg-light dark:text-black text-white " id="dropdown-content">
-        {locales
-          .filter((loc) => loc !== lang)
-          .map((locale) => {
-            const intlLocale = new Intl.Locale(locale);
-            const langName = new Intl.DisplayNames([locale], { type: 'language' }).of(intlLocale.language);
-            return (
-              <li
-                id={`locale-${locale}`}
-                class="flex items-center justify-around p-2.5 hover:bg-gray-700 dark:hover:bg-gray-100"
-              >
-                <img alt={`${langName} flag`} src={getFlagSrc(locale)} />
-                {langName}
-              </li>
-            );
-          })}
-      </ul>
+      <ul class="dropdown-content bg-dark dark:bg-light dark:text-black text-white" id="dropdown-content">
+  {locales
+    .filter((loc) => loc !== lang)
+    .map((locale) => {
+      return (
+        <li
+          id={`locale-${locale}`}
+          class="dropdown-list-item"
+        >
+          <img alt={`${languages[locale]} flag`} src={getFlagSrc(locale)} class="w-6" />
+          {languages[locale]}
+        </li>
+      );
+    })}
+</ul>
     </div>
   ) : (
     <ul>
       {Object.entries(languages).map(([lang, label]) => (
         <li>
-          <a href={`/${lang != 'en' ? lang : ''}`}>{label}</a>
+          <a href={`/${lang != 'en' ? lang : ''}`} class="no-underline">{label}</a>
         </li>
       ))}
     </ul>
@@ -87,75 +89,60 @@ function getFlagSrc(countryCode) {
   }
   setSelectedLocale(window.location.pathname.split('/')[1] || locales[0]);
 </script>
+
 <style>
-  .dropdown button {
-    min-width: 130px;
-    width: max-content;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    justify-content: space-evenly;
-  }
-  .dropdown button img {
-    margin: 0 5px 0 0;
-  }
-  .dropdown button img,
-  .dropdown-content li img {
-    width: 28px;
-  }
-  .dropdown button,
-  .dropdown-content li {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
+  .dropdown-button {
+    @apply  md:w-[140px] w-[110px]  h-[40px] items-start rounded-md text-base cursor-pointer border hover:bg-gray-100 ease-in duration-200 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 md:gap-0.5; 
   }
 
-  .dropdown button:hover {
-    cursor: pointer;
+  .dropdown-button img {
+    @apply  mx-1;
   }
-  /* Style for the dropdown content */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    margin: 1px 0 0 0;
-    padding: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
-    max-height: 315px;
+
+  .dropdown-content li img,
+  .dropdown button img {
+    @apply w-6;
   }
-  /* Style for the dropdown content items */
+
+  .dropdown button, 
   .dropdown-content li {
-    text-decoration: none;
-    justify-content: end;
+    @apply flex  items-center text-sm font-medium;
   }
-  .dropdown-content li img {
-    margin: 0 20px 0px 20px;
-  }
-  /* Style for the dropdown content items on hover */
-  .dropdown-content li:hover {
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  /* Show the dropdown content when the dropdown button is clicked */
-  .dropdown:focus-within .dropdown-content {
-    display: block;
-  }
-  /* Animate the dropdown content */
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
   .dropdown-content {
-    animation: slideIn 0.3s ease-out;
+    @apply absolute hidden rounded-lg shadow-lg z-10 max-h-80;
   }
+
+  .dropdown-content li {
+    @apply no-underline py-1.5 md:w-[140px] w-[110px] hover:bg-gray-700  dark:hover:bg-gray-200 flex items-center;
+  }
+
+  .dropdown-content li img {
+    @apply mx-1.5;
+  }
+
+  .dropdown-content li:hover {
+    @apply cursor-pointer rounded-md;
+  }
+
+  .dropdown:focus-within .dropdown-content {
+    @apply block;
+  }
+
+  /* Custom animation for dropdown-content */
+  @-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+.dropdown-content {
+  -webkit-animation: slideIn 0.3s ease-out;
+  animation: slideIn 0.3s ease-out;
+}
 </style>
