@@ -21,7 +21,7 @@ export const ui = {
     'nav.languages': 'Langues',
     'nav.home': 'Accueil',
     'nav.contact': 'Contact',
-    'action.contact': 'Contactez-nous',
+    'action.contact': 'Contact',
   },
   es: {
     'nav.languages': 'Idiomas',
@@ -33,7 +33,7 @@ export const ui = {
     'nav.languages': 'Sprachen',
     'nav.home': 'Startseite',
     'nav.contact': 'Kontakt',
-    'action.contact': 'Kontaktiere uns',
+    'action.contact': 'Kontakt',
   },
 } as const;
 

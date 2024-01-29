@@ -122,10 +122,46 @@ const metadata = {
     </Fragment>
   </Content>
 
+
+   <!-- Features2 Widget ************** -->
+
+   <Features
+   title="Cómo n3tz es su socio ideal en aplicaciones web"
+   subtitle="En n3tz, nos complace ofrecer soluciones digitales superiores que van más allá para nuestros clientes. Las siguientes son algunas justificaciones para elegirnos para su próximo proyecto:"
+   tagline="Nuestros ideales"
+   items={[
+     {
+       title: 'Empresa centrada',
+       description:
+         'Nuestro equipo está especializado en el desarrollo de aplicaciones web de alta gama, ofreciendo soluciones sofisticadas que satisfacen necesidades empresariales complejas.',
+       icon: 'tabler:users-group',
+     },
+     {
+       title: 'A la medida de su negocio',
+       description:
+         'Entendemos la singularidad de cada proyecto. Nuestro enfoque consiste en crear aplicaciones web personalizadas que se ajusten con precisión a los objetivos de su empresa',
+       icon: 'tabler:highlight',
+     },
+     {
+       title: 'Servicios integrales',
+       description:
+         'Desde el concepto hasta la finalización, nuestras ofertas de servicios integrales garantizan que cada aspecto de su aplicación web sea gestionado por expertos',
+       icon: 'tabler:bulb',
+     },
+     {
+       title: 'Innovación colaborativa',
+       description: 'Fusionamos sus ideas con nuestra experiencia tecnológica para crear aplicaciones web innovadoras',
+       icon: 'tabler:messages',
+     },
+   ]}
+ >
+ </Features>
+
+
   <!-- Steps Widget ****************** -->
 
   <Content2
-    id="porfolio"
+    id="portfolio"
     title="Experiencia de n3tz en aplicaciones web"
     tagline="Lo que hemos hecho antes"
     subtitle="Embárcate en un viaje de diseño que va más allá de los píxeles y entra en el reino de la imaginación. Explore mi portafolio, donde la pasión y la creatividad convergen para dar forma a apasionantes narrativas visuales."
@@ -152,6 +188,10 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         OdinBoost <br /><span class="text-2xl">Tienda de servicios web personalizados</span>
       </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content2>
   <!-- Content Widget **************** -->
@@ -180,6 +220,10 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         LendeXe Finance <br /><span class="text-2xl">Protocolo Web3 Lending DeFi</span>
       </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content2>
   <!-- Content Widget **************** -->
@@ -210,45 +254,13 @@ const metadata = {
         Statement-Clothing <br /><span class="text-2xl">Tienda Shopify de diseño personalizado</span>
       </h3>
     </Fragment>
-  </Content2>
 
-  <!-- Features2 Widget ************** -->
-
-  <Features
-    title="Cómo n3tz es su socio ideal en aplicaciones web"
-    subtitle="En n3tz, nos complace ofrecer soluciones digitales superiores que van más allá para nuestros clientes. Las siguientes son algunas justificaciones para elegirnos para su próximo proyecto:"
-    tagline="Nuestros ideales"
-    items={[
-      {
-        title: 'Empresa centrada',
-        description:
-          'Nuestro equipo está especializado en el desarrollo de aplicaciones web de alta gama, ofreciendo soluciones sofisticadas que satisfacen necesidades empresariales complejas.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'A la medida de su negocio',
-        description:
-          'Entendemos la singularidad de cada proyecto. Nuestro enfoque consiste en crear aplicaciones web personalizadas que se ajusten con precisión a los objetivos de su empresa',
-        icon: 'tabler:highlight',
-      },
-      {
-        title: 'Servicios integrales',
-        description:
-          'Desde el concepto hasta la finalización, nuestras ofertas de servicios integrales garantizan que cada aspecto de su aplicación web sea gestionado por expertos',
-        icon: 'tabler:bulb',
-      },
-      {
-        title: 'Innovación colaborativa',
-        description: 'Fusionamos sus ideas con nuestra experiencia tecnológica para crear aplicaciones web innovadoras',
-        icon: 'tabler:messages',
-      },
-    ]}
-  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features>
+  </Content2>
 
+ 
   <!-- HighlightedPosts Widget ******* -->
 
   <!--   <BlogLatestPosts
@@ -261,44 +273,44 @@ const metadata = {
 
   <!-- FAQs Widget ******************* -->
 
-  <!-- <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that n3tz offers and how it can elevate your web development journey."
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Sumérgete en las siguientes preguntas para obtener una visión más profunda de las poderosas características que ofrece n3tz y cómo puede elevar tu viaje de desarrollo web."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why n3tz?',
+        title: '¿Quién es n3tz y qué hace n3tz?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'n3tz es una empresa dinámica de desarrollo web especializada en la creación de aplicaciones web de alta gama. Nos enfocamos en desarrollar soluciones web sofisticadas y funcionales para empresas que buscan tener un impacto significativo en línea. Nuestros servicios van desde el desarrollo web avanzado hasta la consultoría digital completa.',
       },
       {
-        title: 'What do I need to start?',
+        title: '¿Qué diferencia a n3tz en la industria del desarrollo web?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Lo que distingue a n3tz es nuestro compromiso de proporcionar servicios de aplicaciones web de principio a fin que no solo son técnicamente sólidos, sino también estratégicamente alineados con los objetivos comerciales de nuestros clientes. Nos enorgullecemos de crear soluciones web únicas que combinan innovación, eficiencia y escalabilidad.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: '¿Puede n3tz desarrollar aplicaciones web para industrias o nichos específicos?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Sí, n3tz tiene experiencia en el desarrollo de aplicaciones web para una variedad de industrias y nichos. Ya sea finanzas, juegos, comercio electrónico u otro sector, adaptamos nuestras soluciones a los desafíos y requisitos únicos de cada industria.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: '¿Cómo asegura n3tz la seguridad y protección de datos en sus aplicaciones web?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'En n3tz, la seguridad y protección de datos son primordiales. Incorporamos protocolos de seguridad robustos, incluyendo el cifrado SSL y la integración de pagos seguros, y aseguramos el cumplimiento con las regulaciones de protección de datos. Nuestro compromiso es proporcionar soluciones web seguras y confiables.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: '¿En qué tecnologías se especializa n3tz para el desarrollo de aplicaciones web?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'Nuestro equipo domina una gama de tecnologías modernas esenciales para el desarrollo de aplicaciones web de vanguardia, incluyendo Node.js, React.js y tecnologías blockchain como Solidity para contratos inteligentes. Esta versatilidad técnica nos permite construir soluciones web diversas e innovadoras.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: '¿Cómo maneja n3tz el proceso de desarrollo web de principio a fin?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Nuestro proceso es completo y colaborativo, comenzando por entender su visión, pasando por la fase de desarrollo, y hasta la implementación final. Mantenemos una comunicación abierta con los clientes, proporcionando actualizaciones e integrando retroalimentación para asegurar que el producto final cumpla con sus expectativas.',
       },
     ]}
-  /> -->
+  />
 
   <!-- Stats Widget ****************** -->
 
@@ -334,6 +346,10 @@ const metadata = {
         empresas y particulares ambiciosos y particulares ambiciosos para ayudarles a alcanzar sus objetivos. Estamos
         aquí para ayudarle a hacer crecer su negocio y hacer que sus ideas cobren vida.
       </span>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </CallToAction>
 </Layout>

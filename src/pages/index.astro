@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -120,10 +119,44 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- Features2 Widget ************** -->
+
+  <Features
+  title="How n3tz is Your Ideal Web Application Partner"
+  subtitle="At n3tz, we take pleasure in providing superior digital solutions that go above and beyond for our customers. The following are some justifications for picking us for your upcoming project:"
+  tagline="Our Ideals"
+  items={[
+    {
+      title: 'Focused Enterprise',
+      description:
+        'Our team specializes in high-end web application development, offering sophisticated solutions that cater to complex business needs.',
+      icon: 'tabler:users-group',
+    },
+    {
+      title: 'Tailored for Your Business',
+      description:
+        'We understand the uniqueness of each project. Our approach is to craft customized web applications that align precisely with your business objectives.',
+      icon: 'tabler:highlight',
+    },
+    {
+      title: 'Comprehensive Services',
+      description:
+        'From concept to completion, our full-service offerings ensure every aspect of your web application is expertly handled.',
+      icon: 'tabler:bulb',
+    },
+    {
+      title: 'Collaborative Innovation',
+      description: 'Merging your ideas with our tech expertise for groundbreaking web applications.',
+      icon: 'tabler:messages',
+    },
+  ]}
+>
+</Features>
+
   <!-- Steps Widget ****************** -->
 
   <Content2
-    id="porfolio"
+    id="portfolio"
     title="Showcasing n3tz’s Expertise in Web Applications"
     tagline="What we've done before"
     subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
@@ -150,6 +183,10 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         OdinBoost <br /><span class="text-2xl">Custom Web Service Shop</span>
       </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content2>
   <!-- Content Widget **************** -->
@@ -178,6 +215,10 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         LendeXe Finance <br /><span class="text-2xl">Web3 Lending DeFi Protocol</span>
       </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content2>
   <!-- Content Widget **************** -->
@@ -208,44 +249,14 @@ const metadata = {
         Statement-Clothing <br /><span class="text-2xl">Custom Design Shopify Shop</span>
       </h3>
     </Fragment>
-  </Content2>
 
-  <!-- Features2 Widget ************** -->
-
-  <Features
-    title="How n3tz is Your Ideal Web Application Partner"
-    subtitle="At n3tz, we take pleasure in providing superior digital solutions that go above and beyond for our customers. The following are some justifications for picking us for your upcoming project:"
-    tagline="Our Ideals"
-    items={[
-      {
-        title: 'Focused Enterprise',
-        description:
-          'Our team specializes in high-end web application development, offering sophisticated solutions that cater to complex business needs.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Tailored for Your Business',
-        description:
-          'We understand the uniqueness of each project. Our approach is to craft customized web applications that align precisely with your business objectives.',
-        icon: 'tabler:highlight',
-      },
-      {
-        title: 'Comprehensive Services',
-        description:
-          'From concept to completion, our full-service offerings ensure every aspect of your web application is expertly handled.',
-        icon: 'tabler:bulb',
-      },
-      {
-        title: 'Collaborative Innovation',
-        description: 'Merging your ideas with our tech expertise for groundbreaking web applications.',
-        icon: 'tabler:messages',
-      },
-    ]}
-  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features>
+  </Content2>
+
+
+ 
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -259,44 +270,45 @@ const metadata = {
 
   <!-- FAQs Widget ******************* -->
 
-  <!-- <FAQs
+<FAQs
     title="Frequently Asked Questions"
     subtitle="Dive into the following questions to gain insights into the powerful features that n3tz offers and how it can elevate your web development journey."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why n3tz?',
+        title: 'Who is n3tz and what does n3tz do?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "n3tz is a dynamic web development company specializing in creating high-end web applications. We focus on building sophisticated, functional web solutions for businesses aiming to make a significant impact online. Our services range from advanced web development to comprehensive digital consulting.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'What sets n3tz apart in the web development industry?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          "What distinguishes n3tz is our commitment to delivering end-to-end web application services that are not just technically sound but also strategically aligned with our clients' business goals. We pride ourselves on our ability to craft unique web solutions that combine innovation, efficiency, and scalability.",
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Can n3tz develop web applications for specific industries or niches?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Yes, n3tz has expertise in developing web applications for a variety of industries and niches. Whether it's finance, gaming, e-commerce, or any other sector, we tailor our solutions to meet the unique challenges and requirements of each industry.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "How does n3tz ensure the security and data protection of its web applications?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "At n3tz, security and data protection are paramount. We incorporate robust security protocols, including SSL encryption and secure payment integrations, and ensure compliance with data protection regulations. Our commitment is to provide safe and reliable web solutions.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'What technologies does n3tz specialize in for web application development?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "Our team is proficient in a range of modern technologies essential for cutting-edge web application development, including Node.js, React.js, and blockchain technologies like Solidity for smart contracts. This technical versatility allows us to build diverse and innovative web solutions.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'How does n3tz handle the web development process from start to finish?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "Our process is comprehensive and collaborative, starting from understanding your vision, through the development phase, and to the final deployment. We maintain open communication with clients, providing updates and incorporating feedback to ensure the final product meets their expectations.",
       },
+      
     ]}
-  /> -->
+  /> 
 
   <!-- Stats Widget ****************** -->
 
@@ -331,6 +343,10 @@ const metadata = {
         and individuals to help them achieve their goals. We are here to help you grow your business and make your ideas
         come to life.
       </span>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </CallToAction>
 </Layout>
