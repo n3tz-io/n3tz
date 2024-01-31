@@ -6,6 +6,8 @@ tags:
   - markdown
   - blog
   - Astro
+layout: ../../layouts/MarkdownLayout.astro
+
 ---
 
 import Logo from '~/components/Logo.astro';

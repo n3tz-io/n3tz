@@ -7,6 +7,8 @@ tags:
   - front-end
   - tools
   - resources
+layout: ../../layouts/MarkdownLayout.astro
+
 ---
 
 ## Magna nunc senectus torquent per fusce sapien ligula tempus cra
