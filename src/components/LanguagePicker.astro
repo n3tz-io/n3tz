@@ -31,8 +31,6 @@ function getFlagSrc(countryCode) {
         class="dropdown-button"
       >
         <img alt={`${lang} flag`} src={getFlagSrc(lang)} />
-        {initLang}
-        <Icon name="tabler:chevron-down" class="w-4 h-4 ml-2" />
       </button>
       <ul class="dropdown-content bg-dark dark:bg-light dark:text-black text-white" id="dropdown-content">
   {locales
@@ -44,7 +42,6 @@ function getFlagSrc(countryCode) {
           class="dropdown-list-item"
         >
           <img alt={`${languages[locale]} flag`} src={getFlagSrc(locale)} class="w-6" />
-          {languages[locale]}
         </li>
       );
     })}
@@ -92,11 +89,11 @@ function getFlagSrc(countryCode) {
 
 <style>
   .dropdown-button {
-    @apply  md:w-[140px] w-[110px]  h-[40px] items-start rounded-md text-base cursor-pointer border hover:bg-gray-100 ease-in duration-200 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 md:gap-0.5; 
+    @apply  w-max p-1 items-center justify-center rounded-md text-base cursor-pointer border hover:bg-gray-100 ease-in duration-200 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800; 
   }
 
   .dropdown-button img {
-    @apply  mx-1;
+    @apply  mx-1.5;
   }
 
   .dropdown-content li img,
@@ -106,7 +103,7 @@ function getFlagSrc(countryCode) {
 
   .dropdown button, 
   .dropdown-content li {
-    @apply flex  items-center text-sm font-medium;
+    @apply flex justify-center items-center text-sm font-medium;
   }
 
   .dropdown-content {
@@ -114,7 +111,7 @@ function getFlagSrc(countryCode) {
   }
 
   .dropdown-content li {
-    @apply no-underline py-1.5 md:w-[140px] w-[110px] hover:bg-gray-700  dark:hover:bg-gray-200 flex items-center;
+    @apply no-underline p-1 w-max hover:bg-gray-700  dark:hover:bg-gray-200 flex items-center;
   }
 
   .dropdown-content li img {

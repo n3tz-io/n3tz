@@ -1,7 +1,7 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
-  /*  links: [
+   links: [
     {
       text: 'Blog',
       links: [
@@ -27,7 +27,7 @@ export const headerData = {
         },
       ],
     },
-  ], */
+  ], 
   actions: [{ text: 'action.contact', href: '/contact', translate: true }],
 };
 

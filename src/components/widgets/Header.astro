@@ -71,10 +71,11 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       },
     ]}
   >
-    <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
+    <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between items-center gap-6']}>
       <a class="flex items-center" href={`${lang != 'en' ? '/' + lang : '/'}`}>
         <Logo />
       </a>
+      <a href="/blog" class="font-semibold shadow-none text-sm w-auto ml-6">Blog</a>
     </div>
 
     <div
