@@ -27,6 +27,8 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  description:
+    'Explore the latest trends, innovative strategies, and practical solutions in the world of web development.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -39,81 +41,80 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="Your Gateway to Advanced Web Solutions"
-    >
-    Welcome to the n3tz.io Blog
-    </Headline>
-    <span>At n3tz.io, we are passionate about pushing the boundaries of web technology and sharing our insights with you. Our blog serves as a dynamic platform for exploring the latest trends, innovative strategies, and practical solutions in the world of web development.
+    <Headline subtitle="Your Gateway to Advanced Web Solutions"> Welcome to the n3tz.io Blog </Headline>
+    <span
+      >At n3tz.io, we are passionate about pushing the boundaries of web technology and sharing our insights with you.
+      Our blog serves as a dynamic platform for exploring the latest trends, innovative strategies, and practical
+      solutions in the world of web development.
     </span>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <Features
-    title="What’s Our Blog About?"
-    tagline="Delving into the World of Web Innovation and Strategy"
-    items={[
-      {
-        title: 'In-Depth Insights',
-        description:
-          'Dive into comprehensive articles covering a range of topics from the intricacies of modern web frameworks like Astro, to the latest in web security, performance optimization, and more.',
-        icon: 'tabler:search',
-      },
-      {
-        title: 'Cutting-Edge Trends',
-        description:
-          'Stay ahead of the curve with updates on emerging technologies and how they\'re reshaping the digital landscape.',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'Practical Tips and Guides',
-        description:
-          'Whether you\'re a seasoned developer or just starting out, our practical tips and step-by-step guides are designed to help you navigate the complex world of web development.',
-        icon: 'tabler:manual-gearbox',
-      },
-      {
-        title: 'Case Studies and Success Stories',
-        description:
-          'Learn from real-world examples as we share our experiences in crafting high-end web applications for transformative business solutions.',
-        icon: 'tabler:book',
-      },
-      {
-        title: 'Expert Opinions and Industry Analysis',
-        description:
-          'Gain insights from our team of experts who bring years of experience and a passion for web innovation.',
-        icon: 'tabler:report-analytics',
-      },
-      {
-        title: 'Technology Reviews and Comparisons',
-        description:
-          'Delve into detailed reviews and comparisons of the latest tools and technologies in web development, helping you make informed decisions for your projects.',
-        icon: 'tabler:git-compare',
-      }
-    ]}
-  >
-  </Features>
-  <!-- CallToAction Widget *********** -->
+      title="What’s Our Blog About?"
+      tagline="Delving into the World of Web Innovation and Strategy"
+      items={[
+        {
+          title: 'In-Depth Insights',
+          description:
+            'Dive into comprehensive articles covering a range of topics from the intricacies of modern web frameworks like Astro, to the latest in web security, performance optimization, and more.',
+          icon: 'tabler:search',
+        },
+        {
+          title: 'Cutting-Edge Trends',
+          description:
+            "Stay ahead of the curve with updates on emerging technologies and how they're reshaping the digital landscape.",
+          icon: 'tabler:trending-up',
+        },
+        {
+          title: 'Practical Tips and Guides',
+          description:
+            "Whether you're a seasoned developer or just starting out, our practical tips and step-by-step guides are designed to help you navigate the complex world of web development.",
+          icon: 'tabler:manual-gearbox',
+        },
+        {
+          title: 'Case Studies and Success Stories',
+          description:
+            'Learn from real-world examples as we share our experiences in crafting high-end web applications for transformative business solutions.',
+          icon: 'tabler:book',
+        },
+        {
+          title: 'Expert Opinions and Industry Analysis',
+          description:
+            'Gain insights from our team of experts who bring years of experience and a passion for web innovation.',
+          icon: 'tabler:report-analytics',
+        },
+        {
+          title: 'Technology Reviews and Comparisons',
+          description:
+            'Delve into detailed reviews and comparisons of the latest tools and technologies in web development, helping you make informed decisions for your projects.',
+          icon: 'tabler:git-compare',
+        },
+      ]}
+    />
+    <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get in touch now!',
-        href: '/contact',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      We are here to help you <span class="text-accent highlight">grow your business</span> and make your ideas come to life.
-    </Fragment>
+    <CallToAction
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Get in touch now!',
+          href: '/contact',
+          icon: 'tabler:mail',
+        },
+      ]}
+    >
+      <Fragment slot="title">
+        We are here to help you <span class="text-accent highlight">grow your business</span> and make your ideas come to
+        life.
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        We are a team of highly professional developers and designers who love collaborating with ambitious businesses
-        and individuals to help them achieve their goals. We are here to help you grow your business and make your ideas
-        come to life.
-      </span>
-    </Fragment>
-  </CallToAction>
-</section>
+      <Fragment slot="subtitle">
+        <span class="hidden sm:inline">
+          We are a team of highly professional developers and designers who love collaborating with ambitious businesses
+          and individuals to help them achieve their goals. We are here to help you grow your business and make your
+          ideas come to life.
+        </span>
+      </Fragment>
+    </CallToAction>
+  </section>
 </Layout>
