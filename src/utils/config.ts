@@ -192,7 +192,7 @@ const getAnalytics = () => {
     vendors: {
       googleAnalytics: {
         id: undefined,
-        partytown: true,
+        partytown: false,
       },
     },
   };
