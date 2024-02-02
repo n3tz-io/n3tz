@@ -1,15 +1,14 @@
 ---
 import { languages, locales } from '~/i18n/ui';
-import { getLangFromUrl} from '~/i18n/utils';
+import { getLangFromUrl } from '~/i18n/utils';
 import { Icon } from 'astro-icon/components';
-
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 const lang = getLangFromUrl(Astro.url);
 const initLocale = new Intl.Locale(lang);
-const initLang = capitalizeFirstLetter(new Intl.DisplayNames([lang], {type: 'language',}).of(initLocale.language));
+const initLang = capitalizeFirstLetter(new Intl.DisplayNames([lang], { type: 'language' }).of(initLocale.language));
 export interface Props {
   id?: string;
   defaultLang?: string;
@@ -26,32 +25,28 @@ function getFlagSrc(countryCode) {
 {
   flagSelector ? (
     <div class="dropdown p-3" tabindex="0">
-      <button
-        id="dropdown-btn"
-        class="dropdown-button"
-      >
-        <img alt={`${lang} flag`} src={getFlagSrc(lang)} />
+      <button id="dropdown-btn" class="dropdown-button">
+        <img alt={`${lang} flag`} width="32" height="32" src={getFlagSrc(lang)} />
       </button>
       <ul class="dropdown-content bg-dark dark:bg-light dark:text-black text-white" id="dropdown-content">
-  {locales
-    .filter((loc) => loc !== lang)
-    .map((locale) => {
-      return (
-        <li
-          id={`locale-${locale}`}
-          class="dropdown-list-item"
-        >
-          <img alt={`${languages[locale]} flag`} src={getFlagSrc(locale)} class="w-6" />
-        </li>
-      );
-    })}
-</ul>
+        {locales
+          .filter((loc) => loc !== lang)
+          .map((locale) => {
+            return (
+              <li id={`locale-${locale}`} class="dropdown-list-item">
+                <img alt={`${languages[locale]} flag`} src={getFlagSrc(locale)} class="w-6" />
+              </li>
+            );
+          })}
+      </ul>
     </div>
   ) : (
     <ul>
       {Object.entries(languages).map(([lang, label]) => (
         <li>
-          <a href={`/${lang != 'en' ? lang : ''}`} class="no-underline">{label}</a>
+          <a href={`/${lang != 'en' ? lang : ''}`} class="no-underline">
+            {label}
+          </a>
         </li>
       ))}
     </ul>
@@ -89,11 +84,11 @@ function getFlagSrc(countryCode) {
 
 <style>
   .dropdown-button {
-    @apply  w-max p-1 items-center justify-center rounded-md text-base cursor-pointer border hover:bg-gray-100 ease-in duration-200 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800; 
+    @apply w-max p-1 items-center justify-center rounded-md text-base cursor-pointer border hover:bg-gray-100 ease-in duration-200 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800;
   }
 
   .dropdown-button img {
-    @apply  mx-1.5;
+    @apply mx-1.5;
   }
 
   .dropdown-content li img,
@@ -101,7 +96,7 @@ function getFlagSrc(countryCode) {
     @apply w-6;
   }
 
-  .dropdown button, 
+  .dropdown button,
   .dropdown-content li {
     @apply flex justify-center items-center text-sm font-medium;
   }
@@ -128,18 +123,18 @@ function getFlagSrc(countryCode) {
 
   /* Custom animation for dropdown-content */
   @-webkit-keyframes slideIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-10px);
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+    }
   }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
 
-.dropdown-content {
-  -webkit-animation: slideIn 0.3s ease-out;
-  animation: slideIn 0.3s ease-out;
-}
+  .dropdown-content {
+    -webkit-animation: slideIn 0.3s ease-out;
+    animation: slideIn 0.3s ease-out;
+  }
 </style>
