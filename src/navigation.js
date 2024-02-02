@@ -1,7 +1,7 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
-   links: [
+  links: [
     {
       text: 'Blog',
       links: [
@@ -27,7 +27,7 @@ export const headerData = {
         },
       ],
     },
-  ], 
+  ],
   actions: [{ text: 'action.contact', href: '/contact', translate: true }],
 };
 
@@ -58,7 +58,7 @@ export const footerData = {
     }, */
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/n3tz', target: '_blank' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/n3tz_io', target: '_blank' },
     {
       ariaLabel: 'LinkedIn',
       icon: 'tabler:brand-linkedin',
