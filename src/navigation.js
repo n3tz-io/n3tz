@@ -44,6 +44,10 @@ export const footerData = {
           text: 'nav.contact',
           href: '/contact',
         },
+        {
+          text: 'nav.blog',
+          href: getBlogPermalink(),
+        },
       ],
     },
   ],
