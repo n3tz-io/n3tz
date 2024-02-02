@@ -70,6 +70,7 @@ export const footerData = {
       target: '_blank',
     },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/n3tz-io', target: '_blank' },
+    { ariaLabel: 'Medium', icon: 'tabler:brand-medium', href: 'https://n3tz.medium.com', target: '_blank' },
   ],
   footNote: `
    \u00A92024 n3tz, Ltd. · All rights reserved.
