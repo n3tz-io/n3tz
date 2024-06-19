@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content3.astro';
+const metadata = {
+  title: 'n3tz - Refund Policy for n3tz.io',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout {...metadata}>
+  <div class="flex justify-center items-center">
+    <Content title="Terms of Service for n3tz.io">
+      <Fragment slot="content">
+        <div class="flex flex-col gap-2">
+          <div>
+            <h2>Welcome to n3tz.io. By using our website and services, you agree to these Terms of Service. Please read them carefully.            </h2>
+            <p>Introduction</p>
+            <p>
+              At n3tz.io, we strive to provide high-quality software development services. If you are not satisfied with
+              our services, please review our refund policy below.
+            </p>
+          </div>
+          <div>
+            <h2>Services</h2>
+            <p>
+            n3tz.io provides software development services. The specific terms of each project will be outlined in individual service agreements.
+            </p>
+          </div>
+          <div>
+            <h2>User Responsibilities</h2>
+            <ul>
+              <li>Provide accurate and complete information when engaging our services.</li>
+              <li>Comply with all applicable laws and regulations.</li>
+              <li>Refrain from using our services for any illegal or unauthorized purposes.</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Payment</h2>
+            <p>
+            Payment terms will be specified in the individual service agreements. Late payments may incur additional fees.
+            </p>
+          </div>
+          <div>
+            <h2>Intellectual Property</h2>
+            <p>
+              All intellectual property rights in the services and materials provided by n3tz.io remain with us or our
+              licensors. You may not use, copy, or distribute any materials without our prior written consent.
+            </p>
+          </div>
+          <div>
+            <h2>Limitation of Liability</h2>
+            <p>
+              To the fullest extent permitted by law, n3tz.io shall not be liable for any indirect, incidental, or
+              consequential damages arising from your use of our services.
+            </p>
+          </div>
+          <div>
+            <h2>Termination</h2>
+            <p>
+              We reserve the right to terminate or suspend your access to our services at any time, without notice, for
+              any reason, including violation of these Terms of Service.
+            </p>
+          </div>
+          <div>
+            <h2>Non-Refundable Services</h2>
+            <p>These Terms of Service are governed by the laws of Delaware, USA.</p>
+          </div>
+          <div>
+            <h2>Governing Law</h2>
+            <p>If you have any questions about these Terms of Service, please contact us at contact@n3tz.io.</p>
+          </div>
+        </div>
+
+        <Fragment class="flex justify-center" slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Fragment>
+    </Content>
+  </div>
+</Layout>

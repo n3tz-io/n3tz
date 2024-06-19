@@ -1,0 +1,72 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content3.astro';
+const metadata = {
+    title: 'n3tz - Refund Policy for n3tz.io',
+    ignoreTitleTemplate: true,
+};
+---
+
+<Layout { ...metadata }>
+    <div class="flex justify-center items-center">
+        <Content
+        title="Privacy Policy for n3tz.io"
+      >
+        <Fragment slot="content">
+            <div class="flex flex-col gap-2">
+                <div>
+                    <h2>Privacy Policy for n3tz.io</h2>
+                    <p>Introduction</p>
+                    <p>Welcome to n3tz.io. We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and protect your data in compliance with Delaware and United States law.</p>
+                </div>
+                <div>
+                    <h2>Information We Collect</h2>
+                    <ul>
+                        <li>Personal Information: Name, email address, phone number, and other contact details.</li>
+                        <li>Usage Data: Information on how you use our website and services.</li>
+                        <li>Cookies and Tracking Technologies: Data collected through cookies, web beacons, and other tracking technologies.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>How We Use Your Information</h2>
+                    <ul>
+                        <li>To provide, operate, and maintain our services.</li>
+                        <li>To improve and personalize your experience on our website.</li>
+                        <li>To communicate with you, including sending updates and promotional materials.</li>
+                        <li>To comply with legal obligations and enforce our terms.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Sharing Your Information</h2>
+                    <p>We do not sell your personal information. We may share your data with third parties under the following circumstances:</p>
+                    <ul>
+                        <li>With service providers who assist us in operating our business.</li>
+                        <li>To comply with legal requirements.</li>
+                        <li>To protect our rights and property.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, or misuse.</p>
+                </div>
+                <div>
+                    <h2>Your Rights</h2>
+                    <p>You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at contact@n3tz.io.</p>
+                </div>
+                <div>
+                    <h2>Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page, and we will notify you via email if the changes are significant.</p>
+                </div>
+                <div>
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us at contact@n3tz.io.</p>
+                </div>
+        </Fragment>
+    
+        <Fragment class="flex justify-center" slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Content>
+    </div>
+   
+</Layout>

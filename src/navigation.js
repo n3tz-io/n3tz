@@ -51,15 +51,28 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [
-    /*  {
-      text: 'Privacy',
-      href: '/privacy',
-    },
+  resources : [
     {
-      text: 'Terms',
-      href: '/terms',
-    }, */
+      title: 'Resources',
+      links: [
+        {
+          text: "Privacy Policy",
+          href: '/privacy',
+        },
+        {
+          text: "Terms of Service",
+          href: '/termsofservice',
+        },
+        {
+          text: "Refund Policy",
+          href: '/refund',
+        },
+        {
+          text: "Cookie Policy",
+          href: '/cookie',
+        },
+      ],
+    },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/n3tz_io', target: '_blank' },

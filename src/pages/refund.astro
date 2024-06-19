@@ -1,0 +1,53 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content3.astro';
+const metadata = {
+    title: 'n3tz - Refund Policy for n3tz.io',
+    ignoreTitleTemplate: true,
+};
+---
+
+<Layout { ...metadata }>
+    <div class="flex justify-center items-center">
+        <Content
+        title="Refund Policy for n3tz.io"
+      >
+        <Fragment slot="content">
+            <div class="flex flex-col gap-2">
+                <div>
+                    <p>Introduction</p>
+                    <p>At n3tz.io, we strive to provide high-quality software development services. If you are not satisfied with our services, please review our refund policy below.</p>
+                </div>
+                <div>
+                    <h2>Eligibility for Refunds</h2>
+                    <p>Refunds are available under the following circumstances:</p>
+                    <ul>
+                        <li>If the services provided do not match the agreed-upon specifications.</li>
+                        <li>If the project is canceled by n3tz.io before completion.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Process for Requesting a Refund</h2>
+                    <p>To request a refund, please contact us at contact@n3tz.io within 30 days of the service delivery. Please provide a detailed explanation of your reasons for requesting a refund.</p>
+                </div>
+                <div>
+                    <h2>Refund Approval</h2>
+                    <p>All refund requests will be reviewed on a case-by-case basis. If approved, refunds will be processed within 14 business days.</p>
+                </div>
+                <div>
+                    <h2>Non-Refundable Services</h2>
+                    <p>Payments for consultation, custom software development, and other bespoke services are non-refundable unless specified otherwise in the service agreement.</p>
+                </div>
+                <div>
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about our Refund Policy, please contact us at contact@n3tz.io.</p>
+                </div>
+        </Fragment>
+    
+        <Fragment class="flex justify-center" slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Content>
+    </div>
+   
+</Layout>
