@@ -2,25 +2,20 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import Content2 from '~/components/widgets/Content2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import AboutUsImage from '~/assets/images/about-us.png';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import odinImg from '~/assets/images/odin.png';
 import statementImg from '~/assets/images/statement.png';
 import lendexeImg from '~/assets/images/lendexe.png';
 const metadata = {
-  title: 'n3tz - Desarrollo de aplicaciones web de gama alta',
+  title: 'n3tz - Colectivo de desarrollo web y soluciones digitales',
   description:
-    'n3tz es una agencia de desarrollo web que crea aplicaciones de alta gama para transformar negocios. Nos especializamos en soluciones sofisticadas y funcionales para empresas que desean destacar en línea.',
+    'n3tz es un colectivo de desarrolladores apasionados, especializado en la creación de aplicaciones web y tiendas en línea funcionales y atractivas.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -32,91 +27,42 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: '¡Ponte en contacto ahora!',
-        href: '/contact',
-        icon: 'tabler:mail',
+        text: 'Únete a nosotros',
+        href: '/join',
+        icon: 'tabler:users',
       },
     ]}
   >
     <Fragment slot="title">
-      Creación de <span class="text-accent highlight">aplicaciones web de gama alta</span> para soluciones empresariales
-      transformadoras
+      Construyendo <span class="text-accent highlight">proyectos web innovadores</span> juntos
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Especializados en desarrollo web avanzado</span>, vamos más allá de la básica
-        básica. Nuestro equipo se dedica a construir aplicaciones web sofisticadas y totalmente funcionales diseñadas
-        para empresas que buscan tener un impacto significativo en línea. Con n3tz, eleve su empresa con soluciones web
-        que tan ambiciosas como su visión.</span
-      >
+        <span class="font-semibold">Apasionados por el desarrollo web</span>, somos un colectivo de desarrolladores
+        dedicados a crear soluciones digitales impactantes. Nuestro equipo prospera en la colaboración, el aprendizaje y
+        llevar al límite la tecnología web. Con n3tz, únete a una comunidad donde tus ideas y habilidades pueden
+        florecer.
+      </span>
     </Fragment>
   </Hero2>
-
-  <!-- Features Widget *************** -->
-
-  <!--  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with n3tz"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  /> -->
 
   <!-- Content Widget **************** -->
 
   <Content
-    tagline="¿Quiénes somos?"
-    title="Acerca de n3tz"
+    tagline="Quiénes somos"
+    title="Sobre n3tz"
     image={{
       src: AboutUsImage,
-      alt: 'n3tz team',
+      alt: 'equipo n3tz',
     }}
   >
     <Fragment slot="content">
-      En n3tz, estamos redefiniendo los estándares del desarrollo de aplicaciones web. Nuestra misión es forjar alianzas
-      con empresas preparadas para una evolución digital significativa. Nos especializamos en ofrecer servicios
-      integrales de aplicaciones web que abarcan el diseño, la concepción, la implementación y la consultoría. Our focus
-      is on crafting robust, sophisticated web applications that cater to the unique needs of ambitious enterprises.
-      Entrust your digital digitales a n3tz , donde la precisión, la experiencia y la calidad sin precedentes definen
-      cada solución.
+      En n3tz, somos más que desarrolladores; somos una comunidad impulsada por la pasión por la tecnología y el
+      intercambio de conocimientos. Nuestra misión es colaborar en proyectos que inspiren y eduquen, mientras avanzamos
+      continuamente en nuestras habilidades. Nos especializamos en desarrollar aplicaciones web innovadoras a través de
+      un esfuerzo colectivo, combinando creatividad, experiencia y amor por la programación. Únete a nosotros para crear
+      soluciones web que marquen la diferencia.
     </Fragment>
 
     <Fragment slot="bg">
@@ -127,31 +73,32 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features
-    title="Cómo n3tz es su socio ideal en aplicaciones web"
-    subtitle="En n3tz, nos complace ofrecer soluciones digitales superiores que van más allá para nuestros clientes. Las siguientes son algunas justificaciones para elegirnos para su próximo proyecto:"
-    tagline="Nuestros ideales"
+    title="Lo que hace especial a n3tz"
+    subtitle="En n3tz, prosperamos en la innovación colectiva y una pasión compartida por la tecnología. Aquí está por qué nuestra comunidad se destaca:"
+    tagline="Nuestros Principios"
     items={[
       {
-        title: 'Empresa centrada',
+        title: 'Espíritu Colaborativo',
         description:
-          'Nuestro equipo está especializado en el desarrollo de aplicaciones web de alta gama, ofreciendo soluciones sofisticadas que satisfacen necesidades empresariales complejas.',
+          'Nuestro colectivo está dedicado al desarrollo de aplicaciones web de alta gama, con un enfoque en trabajar juntos para abordar desafíos complejos.',
         icon: 'tabler:users-group',
       },
       {
-        title: 'A la medida de su negocio',
+        title: 'Proyectos Personalizados',
         description:
-          'Entendemos la singularidad de cada proyecto. Nuestro enfoque consiste en crear aplicaciones web personalizadas que se ajusten con precisión a los objetivos de su empresa',
+          'Reconocemos la naturaleza única de cada proyecto. Nuestro enfoque es crear aplicaciones web personalizadas que se alineen con la visión y los objetivos de cada miembro.',
         icon: 'tabler:highlight',
       },
       {
-        title: 'Servicios integrales',
+        title: 'Desarrollo Holístico',
         description:
-          'Desde el concepto hasta la finalización, nuestras ofertas de servicios integrales garantizan que cada aspecto de su aplicación web sea gestionado por expertos',
+          'Desde la ideación hasta la implementación, nuestros servicios integrales aseguran que cada aspecto del desarrollo sea gestionado de manera experta a través del esfuerzo colaborativo.',
         icon: 'tabler:bulb',
       },
       {
-        title: 'Innovación colaborativa',
-        description: 'Fusionamos sus ideas con nuestra experiencia tecnológica para crear aplicaciones web innovadoras',
+        title: 'Colaboración Innovadora',
+        description:
+          'Combinamos nuestras ideas colectivas con la experiencia técnica para crear aplicaciones web innovadoras.',
         icon: 'tabler:messages',
       },
     ]}
@@ -161,20 +108,20 @@ const metadata = {
 
   <Content2
     id="portfolio"
-    title="Experiencia de n3tz en aplicaciones web"
-    tagline="Lo que hemos hecho antes"
-    subtitle="Embárcate en un viaje de diseño que va más allá de los píxeles y entra en el reino de la imaginación. Explore mi portafolio, donde la pasión y la creatividad convergen para dar forma a apasionantes narrativas visuales."
+    title="Proyectos en los que han trabajado nuestros miembros del equipo"
+    tagline="Nuestro Viaje Juntos"
+    subtitle="Explora los proyectos innovadores que hemos llevado a la vida a través de la colaboración y la pasión compartida."
     isReversed
     items={[
       {
-        title: 'Lo que hicimos',
-        descripción:
-          'OdinBoost, un distinguido cliente nuestro, imaginó un centro de servicios de juego basado en web, seguro y de última generación, y nosotros le dimos vida. La plataforma, dirigida a jugadores ávidos, ofrece servicios de refuerzo para títulos populares como League of Legends, Valorant, TFT y Wild Rift. Las transacciones fluidas son la columna vertebral de la experiencia del usuario, facilitada por una plétora de métodos de pago: PayPal, PayOp, Coinbase y Stripe. Los jugadores pueden dar rienda suelta a su pasión, realizando compras sin esfuerzo, y sumergirse en un viaje de juego sin igual.',
+        title: 'Resumen del Proyecto',
+        description:
+          'OdinBoost, una plataforma creada para gamers apasionados, fue llevada a la vida por nuestro colectivo. Ofrece servicios de boosting para títulos populares como League of Legends, Valorant, TFT y Wild Rift. Nuestro esfuerzo colectivo aseguró transacciones fluidas y una experiencia de juego inigualable.',
       },
     ]}
     image={{
       src: odinImg,
-      alt: 'odinboost website',
+      alt: 'sitio web de odinboost',
     }}
     callToAction={{
       target: '_blank',
@@ -185,7 +132,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        OdinBoost <br /><span class="text-2xl">Tienda de servicios web personalizados</span>
+        OdinBoost <br /><span class="text-2xl">Tienda de servicios web a medida</span>
       </h3>
     </Fragment>
 
@@ -193,6 +140,7 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content2>
+
   <!-- Content Widget **************** -->
 
   <Content2
@@ -205,19 +153,19 @@ const metadata = {
     }}
     items={[
       {
-        title: 'Lo que hicimos',
-        descripción:
-          'En colaboración con LendeXe Finance, n3tz desempeñó un papel fundamental en la mejora de su plataforma DeFi. Nuestro cofundador dirigió el desarrollo del contrato inteligente utilizando Solidity, y nuestro equipo construyó un backend Node.js escalable y un sofisticado frontend React.js, elevando la experiencia general del usuario y mostrando nuestras capacidades en tecnología blockchain y desarrollo web.',
+        title: 'Resumen del Proyecto',
+        description:
+          'En colaboración con LendeXe Finance, nuestro equipo desempeñó un papel fundamental en la mejora de su plataforma DeFi. Nuestro cofundador lideró el desarrollo de Smart Contracts usando Solidity y nuestro equipo construyó un backend escalable con Node.js y un frontend sofisticado con React.js, demostrando nuestras capacidades en tecnología blockchain y desarrollo web.',
       },
     ]}
     image={{
       src: lendexeImg,
-      alt: 'lendexe finance platform',
+      alt: 'plataforma de lendexe finance',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        LendeXe Finance <br /><span class="text-2xl">Protocolo Web3 Lending DeFi</span>
+        LendeXe Finance <br /><span class="text-2xl">Protocolo DeFi de préstamos Web3</span>
       </h3>
     </Fragment>
 
@@ -225,6 +173,7 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content2>
+
   <!-- Content Widget **************** -->
 
   <Content2
@@ -238,19 +187,19 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'What we did',
+        title: 'Resumen del Proyecto',
         description:
-          'When statement.clo, a purveyor of unique and contemporary apparel, sought a digital facelift, we stepped in. In tandem with the client, we meticulously reimagined their online presence, focusing on user experience, site speed, and a streamlined checkout process. The results? Every collection drop post-redesign has witnessed a sell-out, translating to soaring sales and enhanced customer satisfaction.',
+          'Cuando statement.clo, un proveedor de ropa única y contemporánea, necesitó un rediseño digital, nuestro equipo intervino. Reimaginamos cuidadosamente su presencia en línea, enfocándonos en la experiencia del usuario, la velocidad del sitio y un proceso de pago optimizado. ¿El resultado? Cada colección lanzada después del rediseño se agotó, lo que se traduce en un aumento de las ventas y una mayor satisfacción del cliente.',
       },
     ]}
     image={{
       src: statementImg,
-      alt: 'statement clothing website',
+      alt: 'sitio web de statement clothing',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Statement-Clothing <br /><span class="text-2xl">Tienda Shopify de diseño personalizado</span>
+        Statement-Clothing <br /><span class="text-2xl">Tienda Shopify personalizada</span>
       </h3>
     </Fragment>
 
@@ -259,67 +208,46 @@ const metadata = {
     </Fragment>
   </Content2>
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <!--   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display n3tz documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  /> -->
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Preguntas Frecuentes"
-    subtitle="Sumérgete en las siguientes preguntas para obtener una visión más profunda de las poderosas características que ofrece n3tz y cómo puede elevar tu viaje de desarrollo web."
+    subtitle="Sumérgete en las siguientes preguntas para obtener información sobre el enfoque único y la experiencia del colectivo n3tz."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
         title: '¿Quién es n3tz y qué hace n3tz?',
         description:
-          'n3tz es una empresa dinámica de desarrollo web especializada en la creación de aplicaciones web de alta gama. Nos enfocamos en desarrollar soluciones web sofisticadas y funcionales para empresas que buscan tener un impacto significativo en línea. Nuestros servicios van desde el desarrollo web avanzado hasta la consultoría digital completa.',
+          'n3tz es un colectivo apasionado de desarrolladores y diseñadores especializados en crear aplicaciones web innovadoras. Nos enfocamos en construir soluciones web sofisticadas y funcionales impulsadas por nuestro amor por la tecnología y el desarrollo.',
       },
       {
-        title: '¿Qué diferencia a n3tz en la industria del desarrollo web?',
+        title: '¿Qué distingue a n3tz en la industria del desarrollo web?',
         description:
-          'Lo que distingue a n3tz es nuestro compromiso de proporcionar servicios de aplicaciones web de principio a fin que no solo son técnicamente sólidos, sino también estratégicamente alineados con los objetivos comerciales de nuestros clientes. Nos enorgullecemos de crear soluciones web únicas que combinan innovación, eficiencia y escalabilidad.',
+          'Lo que distingue a n3tz es nuestro espíritu colaborativo y nuestro compromiso con la innovación. Combinamos experiencia técnica con resolución creativa de problemas para entregar aplicaciones web que no solo son técnicamente sólidas, sino que también están alineadas con nuestra visión colectiva.',
       },
       {
         title: '¿Puede n3tz desarrollar aplicaciones web para industrias o nichos específicos?',
         description:
-          'Sí, n3tz tiene experiencia en el desarrollo de aplicaciones web para una variedad de industrias y nichos. Ya sea finanzas, juegos, comercio electrónico u otro sector, adaptamos nuestras soluciones a los desafíos y requisitos únicos de cada industria.',
+          'Sí, los miembros de n3tz tienen experiencia en desarrollar aplicaciones web para diversas industrias y nichos. Ya sea finanzas, gaming, comercio electrónico u otros sectores, adaptamos nuestras soluciones para enfrentar los desafíos y requisitos únicos de cada industria.',
       },
       {
-        title: '¿Cómo asegura n3tz la seguridad y protección de datos en sus aplicaciones web?',
+        title: '¿Cómo asegura n3tz la seguridad y protección de datos de sus aplicaciones web?',
         description:
-          'En n3tz, la seguridad y protección de datos son primordiales. Incorporamos protocolos de seguridad robustos, incluyendo el cifrado SSL y la integración de pagos seguros, y aseguramos el cumplimiento con las regulaciones de protección de datos. Nuestro compromiso es proporcionar soluciones web seguras y confiables.',
+          'En n3tz, la seguridad y protección de datos son primordiales. Implementamos protocolos de seguridad robustos, incluyendo cifrado SSL e integraciones de pago seguras, y garantizamos el cumplimiento de las regulaciones de protección de datos para ofrecer soluciones web seguras y fiables.',
       },
       {
         title: '¿En qué tecnologías se especializa n3tz para el desarrollo de aplicaciones web?',
         description:
-          'Nuestro equipo domina una gama de tecnologías modernas esenciales para el desarrollo de aplicaciones web de vanguardia, incluyendo Node.js, React.js y tecnologías blockchain como Solidity para contratos inteligentes. Esta versatilidad técnica nos permite construir soluciones web diversas e innovadoras.',
+          'Nuestro equipo domina una variedad de tecnologías modernas esenciales para el desarrollo de aplicaciones web avanzadas, incluyendo Node.js, React.js y tecnologías blockchain como Solidity para contratos inteligentes. Esta versatilidad técnica nos permite construir soluciones web diversas e innovadoras.',
       },
       {
         title: '¿Cómo maneja n3tz el proceso de desarrollo web de principio a fin?',
         description:
-          'Nuestro proceso es completo y colaborativo, comenzando por entender su visión, pasando por la fase de desarrollo, y hasta la implementación final. Mantenemos una comunicación abierta con los clientes, proporcionando actualizaciones e integrando retroalimentación para asegurar que el producto final cumpla con sus expectativas.',
+          'Nuestro proceso es integral y colaborativo, comenzando por comprender tu visión, pasando por la fase de desarrollo y hasta el despliegue final. Mantenemos una comunicación abierta, proporcionamos actualizaciones e incorporamos comentarios para asegurarnos de que el producto final cumpla con nuestros estándares colectivos.',
       },
     ]}
   />
-
-  <!-- Stats Widget ****************** -->
-
-  <!--   <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  /> -->
 
   <!-- CallToAction Widget *********** -->
 
@@ -327,22 +255,20 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: '¡Ponte en contacto ahora!',
+        text: '¡Contáctanos ahora!',
         href: '/contact',
         icon: 'tabler:mail',
       },
     ]}
   >
     <Fragment slot="title">
-      Estamos aquí para ayudarle a <span class="text-accent highlight">hacer crecer su negocio</span> y hacer realidad sus
-      ideas.
+      Estamos aquí para <span class="text-accent highlight">dar vida a tus ideas</span>.
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Somos un equipo de desarrolladores y diseñadores altamente profesionales a los que les encanta colaborar con
-        empresas y particulares ambiciosos y particulares ambiciosos para ayudarles a alcanzar sus objetivos. Estamos
-        aquí para ayudarle a hacer crecer su negocio y hacer que sus ideas cobren vida.
+        Somos un equipo de desarrolladores y diseñadores apasionados que aman colaborar en proyectos innovadores.
+        Trabajemos juntos para crear algo asombroso.
       </span>
     </Fragment>
 
@@ -350,4 +276,11 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </CallToAction>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Encuentra más contenido en nuestro Blog"
+    information={`Descubre conocimientos y secretos de la industria de nuestro equipo experto, que está moldeando activamente el futuro del desarrollo de aplicaciones web avanzadas. Nuestro blog ofrece una inmersión profunda en el mundo de las tecnologías web de vanguardia y estrategias prácticas de desarrollo.`}
+  />
 </Layout>

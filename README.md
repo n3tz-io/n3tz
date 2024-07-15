@@ -1,6 +1,6 @@
 # 👩‍🚀 n3tz Landing Page
 
-This is the repository for the landing page of n3tz, a web agency. We've built our landing page using [AstroWind](https://github.com/astro/astro-wind), a modern front-end framework.
+This is the repository for the landing page of n3tz, a web development collective. We've built our landing page using [AstroWind](https://github.com/astro/astro-wind), a modern front-end framework.
 <br>
 <br>
 <img src="https://miro.medium.com/v2/resize:fit:1358/1*7iAZyZ4M9uHo8GHcGbVHDw.gif" 

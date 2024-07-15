@@ -47,7 +47,7 @@ Are you ready to harness Astro's potential and catapult your web pages to stella
 
 Eager to start benefiting from Astro? Contact us now!
 
-Join the vanguard of web enthusiasts embarking on a journey for perfect web performance—it starts with Astro. Get exceptional web experiences for your business with our web agency.
+Join the vanguard of web enthusiasts embarking on a journey for perfect web performance—it starts with Astro. Get exceptional web experiences for your business with our web development collective.
 
 
 [[Top]](#top)
