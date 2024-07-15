@@ -11,7 +11,7 @@ metadata:
   title:
     default: n3tz
     template: '%s | n3tz'
-  description: 'n3tz is a collective of passionate developers offering advanced web application development.',
+  description: 'n3tz is a collective of passionate developers offering advanced web application development.'
   robots:
     index: true
     follow: true

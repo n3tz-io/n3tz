@@ -17,6 +17,7 @@ export const ui = {
     'nav.blog': 'Blog',
     'action.contact': 'Contact us',
     'href.home': '/',
+    tarik: 'Tarik',
   },
   fr: {
     'nav.languages': 'Langues',
@@ -24,6 +25,7 @@ export const ui = {
     'nav.contact': 'Contact',
     'nav.blog': 'Blog',
     'action.contact': 'Contact',
+    tarik: 'Tarik',
   },
   es: {
     'nav.languages': 'Idiomas',
@@ -31,6 +33,7 @@ export const ui = {
     'nav.contact': 'Contacto',
     'nav.blog': 'Blog',
     'action.contact': 'Contáctenos',
+    tarik: 'Tarik',
   },
   de: {
     'nav.languages': 'Sprachen',
@@ -38,6 +41,7 @@ export const ui = {
     'nav.contact': 'Kontakt',
     'nav.blog': 'Blog',
     'action.contact': 'Kontakt',
+    tarik: 'Tarik',
   },
 } as const;
 

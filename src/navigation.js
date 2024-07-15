@@ -50,6 +50,16 @@ export const footerData = {
         },
       ],
     },
+    {
+      title: 'Team',
+      links: [
+        {
+          text: 'tarik',
+          href: 'https://tarik.n3tz.io',
+          target: '_blank'
+        }
+      ]
+    }
   ],
   resources : [
     {

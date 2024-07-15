@@ -12,6 +12,7 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  target?: string;
 }
 
 interface Links {
@@ -28,7 +29,14 @@ export interface Props {
   resources: Array<Link>;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], resources = [], footNote = '', theme = 'light' } = Astro.props;
+const {
+  socialLinks = [],
+  secondaryLinks = [],
+  links = [],
+  resources = [],
+  footNote = '',
+  theme = 'light',
+} = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -41,11 +49,12 @@ const { socialLinks = [], secondaryLinks = [], links = [], resources = [], footN
         </div>
         <div class="text-sm text-muted">
           {
-            secondaryLinks.map(({ text, href }) => (
+            secondaryLinks.map(({ text, href, target }) => (
               <a
                 class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out mr-2 rtl:mr-0 rtl:ml-2"
                 href={`${lang != 'en' ? lang : ''}${href}`}
                 set:html={t(text)}
+                target={target}
               />
             ))
           }
@@ -57,12 +66,13 @@ const { socialLinks = [], secondaryLinks = [], links = [], resources = [], footN
             <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
+                {links.map(({ text, href, ariaLabel, target }) => (
                   <li class="mb-2">
                     <a
                       class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
                       href={`${lang != 'en' ? '/' + lang + href : href}`}
                       aria-label={ariaLabel}
+                      target={target}
                     >
                       <Fragment set:html={t(text)} />
                     </a>
@@ -79,11 +89,12 @@ const { socialLinks = [], secondaryLinks = [], links = [], resources = [], footN
             <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
-                {links.map(({ text, href }) => (
+                {links.map(({ text, href, target }) => (
                   <li class="mb-2">
                     <a
                       class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
                       href={href}
+                      target={target}
                     >
                       {text}
                     </a>
