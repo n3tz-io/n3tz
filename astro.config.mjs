@@ -1,6 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig, sharpImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
@@ -61,7 +61,7 @@ export default defineConfig({
     tasks(),
   ],
   image: {
-    service: squooshImageService(),
+    service: sharpImageService(),
   },
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
