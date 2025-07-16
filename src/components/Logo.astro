@@ -1,5 +1,6 @@
 ---
-import Image from '~/components/common/Image.astro';
+import { Image } from 'astro:assets';
+import logoImg from '~/assets/images/logo.webp';
 ---
 
 <Image
@@ -9,6 +10,7 @@ import Image from '~/components/common/Image.astro';
   widths={[50, 100]}
   sizes="(max-width: 640px) 50px, 100px"
   layout="responsive"
+  loading="eager"
   alt="Logo of n3tz"
-  src="~/assets/images/logo.png"
+  src={logoImg}
 />

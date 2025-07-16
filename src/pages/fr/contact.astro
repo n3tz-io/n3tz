@@ -5,16 +5,17 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contactez nous',
-  description: 'Contactez n3tz pour le support, les ventes ou les solutions personnalisées.',
+  title: 'Contact - n3tz Studio de Développement Web Professionnel',
+  description:
+    'Contactez n3tz pour des services de développement web professionnels, des consultations de projet et des solutions numériques personnalisées.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <HeroText tagline="Contact" title="Connectons-nous !" />
+  <HeroText tagline="Contact" title="Prêt à démarrer votre projet ?" />
 
   <ContactUs
-    subtitle="Nous sommes là pour vous aider ! Contactez-nous pour toute question ou demande. Nous avons hâte de vous entendre."
+    subtitle="Prêt à transformer votre présence numérique ? Contactez notre équipe professionnelle de développement web pour discuter de vos exigences de projet et explorer comment nous pouvons vous aider à atteindre vos objectifs commerciaux."
     inputs={[
       {
         type: 'text',
@@ -51,22 +52,22 @@ const metadata = {
   />
 
   <Features2
-    title="Support dédié à chaque étape"
+    title="Comment nous pouvons vous aider"
     items={[
       {
-        title: 'Assistance client',
+        title: 'Consultation de projet',
         description:
-          "Connectez-vous avec nous pour obtenir de l'aide pour la gestion de projets, comprendre nos services, les demandes de facturation ou les questions générales sur les offres de n3tz.",
+          'Planifiez une consultation pour discuter de vos besoins en développement web, de la portée du projet et de la façon dont notre équipe professionnelle peut livrer la solution parfaite pour votre entreprise.',
       },
       {
-        title: 'Ventes & Solutions personnalisées',
+        title: 'Services de développement personnalisés',
         description:
-          'Discutez de vos besoins spécifiques de projet, explorez les possibilités de personnalisation, apprenez-en plus sur notre processus de développement ou demandez des devis et des délais.',
+          "Des sites web élégants aux applications web complexes, nous fournissons des services de développement sur mesure qui s'adaptent à vos exigences commerciales et favorisent la croissance.",
       },
       {
         title: 'Support technique',
         description:
-          "Contactez-nous pour obtenir de l'aide technique avec les applications web, le dépannage, les problèmes de compatibilité ou tout défi que vous rencontrez avec nos solutions numériques.",
+          "Obtenez une assistance experte pour les défis de développement web, l'optimisation des performances ou des conseils techniques pour vos solutions numériques existantes.",
       },
     ]}
   />

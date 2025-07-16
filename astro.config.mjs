@@ -24,6 +24,9 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   output: 'static',
+  experimental: {
+    contentLayer: true,
+  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es', 'fr', 'de'],

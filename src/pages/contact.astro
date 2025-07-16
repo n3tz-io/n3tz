@@ -5,18 +5,19 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
-  description: 'Contact n3tz for support, collaboration, or inquiries.',
+  title: 'Contact - n3tz Professional Web Development Studio',
+  description:
+    'Contact n3tz for professional web development services, project consultations, and custom digital solutions.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="Ready to Start Your Project?" />
 
   <ContactUs
-    subtitle="We're excited to hear from you! Reach out with any questions or collaboration ideas. Let's make something great together."
+    subtitle="Ready to transform your digital presence? Contact our professional web development team to discuss your project requirements and explore how we can help achieve your business goals."
     inputs={[
       {
         type: 'text',
@@ -55,22 +56,22 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Support and Collaboration"
+    title="How We Can Help"
     items={[
       {
-        title: 'General Inquiries',
+        title: 'Project Consultation',
         description:
-          'Connect with us for any questions, understanding our projects, or learning more about n3tz’s mission and values.',
+          'Schedule a consultation to discuss your web development needs, project scope, and how our professional team can deliver the perfect solution for your business.',
       },
       {
-        title: 'Collaborative Projects',
+        title: 'Custom Development Services',
         description:
-          'Discuss your project ideas, explore collaboration opportunities, and learn about how we can work together to bring your vision to life.',
+          'From elegant websites to complex web applications, we provide tailored development services that scale with your business requirements and drive growth.',
       },
       {
-        title: 'Technical Assistance',
+        title: 'Technical Support',
         description:
-          "Reach out for help with web applications, troubleshooting, or any technical challenges you're facing with our digital solutions.",
+          'Get expert assistance with web development challenges, performance optimization, or technical guidance for your existing digital solutions.',
       },
     ]}
   />

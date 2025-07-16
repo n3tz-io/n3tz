@@ -1,5 +1,5 @@
 ---
-publishDate: 2024-01-05T00:00:00Z
+publishDate: 2025-05-05T00:00:00Z
 title: Unleashing Next.js in Web Development
 excerpt: A Comprehensive Guide to Next.js for Enhanced Performance and SEO
 tags:
@@ -9,7 +9,7 @@ tags:
   - React
   - n3tz
 canonical: https://n3tz.io/nextjs-a-comprehensive-guide
-image: https://n3tz.io/img/nextjs-wallpaper.avif
+image: ../../assets/images/nextjs-wallpaper.avif
 ---
 
 # **Unleashing Next.js in Web Development: A Comprehensive Guide**

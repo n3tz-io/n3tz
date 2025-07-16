@@ -5,18 +5,19 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Kontakt',
-  description: 'Kontaktieren Sie n3tz für Support, Verkauf oder individuelle Lösungen.',
+  title: 'Kontakt - n3tz Professionelles Web-Entwicklungsstudio',
+  description:
+    'Kontaktieren Sie n3tz für professionelle Web-Entwicklungsdienstleistungen, Projektberatung und maßgeschneiderte digitale Lösungen.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Kontakt" title="Kontaktieren Sie uns!" />
+  <HeroText tagline="Kontakt" title="Bereit, Ihr Projekt zu starten?" />
 
   <ContactUs
-    subtitle="Wir sind hier, um zu helfen! Kontaktieren Sie uns mit allen Fragen oder Anfragen. Wir freuen uns darauf, von Ihnen zu hören."
+    subtitle="Bereit, Ihre digitale Präsenz zu transformieren? Kontaktieren Sie unser professionelles Web-Entwicklungsteam, um Ihre Projektanforderungen zu besprechen und zu erkunden, wie wir Ihnen helfen können, Ihre Geschäftsziele zu erreichen."
     inputs={[
       {
         type: 'text',
@@ -55,22 +56,22 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Engagierte Unterstützung bei jedem Schritt"
+    title="Wie wir Ihnen helfen können"
     items={[
       {
-        title: 'Kundenbetreuung',
+        title: 'Projektberatung',
         description:
-          'Wenden Sie sich an uns, wenn Sie Hilfe beim Projektmanagement benötigen, unsere Dienstleistungen verstehen möchten, Fragen zur Rechnungsstellung haben oder allgemeine Fragen zu den Angeboten von n3tz haben.',
+          'Vereinbaren Sie eine Beratung, um Ihre Web-Entwicklungsbedürfnisse, den Projektumfang und die Art und Weise zu besprechen, wie unser professionelles Team die perfekte Lösung für Ihr Unternehmen liefern kann.',
       },
       {
-        title: 'Vertrieb & kundenspezifische Lösungen',
+        title: 'Maßgeschneiderte Entwicklungsdienstleistungen',
         description:
-          'Besprechen Sie Ihre spezifischen Projektanforderungen, erkunden Sie Anpassungsmöglichkeiten, erfahren Sie mehr über unseren Entwicklungsprozess, oder erkundigen Sie sich nach Angeboten und Zeitplänen.',
+          'Von eleganten Websites bis hin zu komplexen Webanwendungen bieten wir maßgeschneiderte Entwicklungsdienstleistungen, die mit Ihren Geschäftsanforderungen skalieren und das Wachstum fördern.',
       },
       {
         title: 'Technischer Support',
         description:
-          'Wenden Sie sich an uns, wenn Sie technische Unterstützung bei Webanwendungen, Fehlerbehebung, Kompatibilitätsproblemen oder anderen Herausforderungen im Zusammenhang mit unseren digitalen Lösungen benötigen.',
+          'Erhalten Sie fachkundige Unterstützung bei Web-Entwicklungsherausforderungen, Leistungsoptimierung oder technische Beratung für Ihre bestehenden digitalen Lösungen.',
       },
     ]}
   />

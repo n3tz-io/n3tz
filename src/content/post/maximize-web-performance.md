@@ -1,8 +1,8 @@
 ---
-publishDate: 2024-01-02T00:00:00Z
+publishDate: 2025-06-02T00:00:00Z
 title: Maximize Web Performance
 excerpt: Discover Astro's Advantage for Static Pages in Web Development
-image: https://n3tz.io/img/astro-wallpaper.avif
+image: ../../assets/images/astro-wallpaper.avif
 tags:
   - SEO
   - web performance
@@ -43,11 +43,10 @@ Witness Astro's prowess firsthand through our transformation story. n3tz.io is n
 
 Astro offers web developers a digital alchemy—turning your static pages gold with speed, efficiency, and a user-centric approach. Faster load times, SEO primacy, and lean JavaScript usage define its core, promising an uncompromised web experience.
 
-Are you ready to harness Astro's potential and catapult your web pages to stellar performance? 
+Are you ready to harness Astro's potential and catapult your web pages to stellar performance?
 
 Eager to start benefiting from Astro? Contact us now!
 
 Join the vanguard of web enthusiasts embarking on a journey for perfect web performance—it starts with Astro. Get exceptional web experiences with our web development collective.
-
 
 [[Top]](#top)

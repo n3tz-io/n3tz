@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import Image from '~/components/common/Image.astro';
+import { Image } from 'astro:assets';
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 
@@ -30,7 +30,7 @@ const { Content } = post;
             post.author && (
               <>
                 {' '}
-                ·{' '}<Icon name="tabler:user" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
+                · <Icon name="tabler:user" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
                 <span class="inline-block">{post.author}</span>
               </>
             )

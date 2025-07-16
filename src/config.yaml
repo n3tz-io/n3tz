@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: n3tz
     images:
-      - url: '~/assets/images/default.webp'
+      - url: '/src/assets/images/default.webp'
         width: 1200
         height: 628
     type: website

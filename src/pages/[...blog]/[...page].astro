@@ -26,9 +26,9 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''} - n3tz Professional Web Development Studio`,
   description:
-    'Explore the latest trends, innovative strategies, and practical solutions in the world of web development.',
+    'Discover expert insights, cutting-edge strategies, and practical solutions from our professional web development team.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -41,17 +41,17 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline subtitle="Your Gateway to Advanced Web Solutions"> Welcome to the n3tz.io Blog </Headline>
+    <Headline subtitle="Expert Insights from Professional Web Developers"> Welcome to the n3tz.io Blog </Headline>
     <span>
-      At n3tz.io, we are passionate about coding and pushing the boundaries of web technology. Our blog serves as a
-      dynamic platform for sharing our insights, exploring the latest trends, innovative strategies, and practical
-      solutions in the world of web development.
+      At n3tz.io, our professional web development team shares expert insights and industry knowledge to help businesses
+      navigate the evolving digital landscape. Our blog delivers practical solutions, cutting-edge strategies, and
+      technical expertise to support your web development journey.
     </span>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <Features
-      title="What’s Our Blog About?"
-      tagline="Delving into the World of Web Innovation and Strategy"
+      title="What's Our Blog About?"
+      tagline="Professional Web Development Insights and Expertise"
       items={[
         {
           title: 'In-Depth Insights',
@@ -97,20 +97,20 @@ const metadata = {
       actions={[
         {
           variant: 'primary',
-          text: 'Get in touch now!',
+          text: 'Start Your Project',
           href: '/contact',
-          icon: 'tabler:mail',
+          icon: 'tabler:rocket',
         },
       ]}
     >
       <Fragment slot="title">
-        We love <span class="text-accent highlight">coding and sharing our knowledge</span>.
+        Ready to <span class="text-accent highlight">transform your digital presence</span>?
       </Fragment>
 
       <Fragment slot="subtitle">
         <span class="hidden sm:inline">
-          We are a collective of passionate developers who enjoy collaborating and exploring new technologies. Join us
-          to share ideas, learn, and grow together.
+          Our professional web development team is ready to help you achieve your business goals. Contact us today to
+          discuss your project requirements and explore custom solutions.
         </span>
       </Fragment>
     </CallToAction>
