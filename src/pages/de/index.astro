@@ -5,16 +5,17 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import Content2 from '~/components/widgets/Content2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import AboutUsImage from '~/assets/images/about-us.png';
-import odinImg from '~/assets/images/odin.png';
-import statementImg from '~/assets/images/statement.png';
-import lendexeImg from '~/assets/images/lendexe.png';
+import AboutUsImage from '~/assets/images/about-us.webp';
+import odinImg from '~/assets/images/odin.webp';
+import statementImg from '~/assets/images/statement.webp';
+import lendexeImg from '~/assets/images/lendexe.webp';
+import eloheavenImg from '~/assets/images/eloheaven_home.webp';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 const metadata = {
-  title: 'n3tz - Kollektiv für Webentwicklung und digitale Lösungen',
+  title: 'n3tz - Professionelles Webentwicklungsstudio',
   description:
-    'n3tz ist ein Kollektiv leidenschaftlicher Entwickler, das sich auf die Erstellung von funktionalen und schönen Webanwendungen und Webshops spezialisiert hat.',
+    'n3tz ist ein professionelles Webentwicklungsstudio, das maßgeschneiderte digitale Lösungen für Unternehmen jeder Größe erstellt - von eleganten Websites bis hin zu komplexen Webanwendungen.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -26,22 +27,21 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Treten Sie bei',
-        href: '/join',
-        icon: 'tabler:users',
+        text: 'Kontakt aufnehmen',
+        href: '/de/contact',
+        icon: 'tabler:mail',
       },
     ]}
   >
     <Fragment slot="title">
-      Zusammen <span class="text-accent highlight">innovative Webprojekte</span> entwickeln
+      Ideen in <span class="text-accent highlight">digitale Realität</span> verwandeln
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Leidenschaftlich für Webentwicklung</span>, sind wir ein Kollektiv von Entwicklern,
-        das sich der Schaffung wirkungsvoller digitaler Lösungen verschrieben hat. Unser Team gedeiht durch
-        Zusammenarbeit, Lernen und das Ausreizen der Grenzen der Webtechnologie. Mit n3tz können Sie einer Gemeinschaft
-        beitreten, in der Ihre Ideen und Fähigkeiten gedeihen können.
+        <span class="font-semibold">Professionelles Webentwicklungsstudio</span>, das maßgeschneiderte digitale Lösungen
+        für Unternehmen jeder Größe erstellt. Von eleganten Websites bis hin zu komplexen Webanwendungen liefern wir
+        skalierbare Lösungen, die Ihr Unternehmen voranbringen.
       </span>
     </Fragment>
   </Hero2>
@@ -57,11 +57,11 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      Bei n3tz sind wir mehr als nur Entwickler; wir sind eine Gemeinschaft, die von einer Leidenschaft für Technologie
-      und Wissensaustausch angetrieben wird. Unsere Mission ist es, an Projekten zu arbeiten, die inspirieren und
-      lehren, während wir kontinuierlich unsere Fähigkeiten erweitern. Wir sind auf die Entwicklung innovativer
-      Webanwendungen durch kollektive Anstrengung spezialisiert und verbinden Kreativität, Fachwissen und die Liebe zum
-      Programmieren. Treten Sie uns bei und schaffen Sie mit uns Weblösungen, die einen Unterschied machen.
+      n3tz ist ein professionelles Webentwicklungsstudio, das sich darauf spezialisiert hat, Ihre digitale Vision in die
+      Realität umzusetzen. Wir erstellen maßgeschneiderte Weblösungen, die mit Ihrem Unternehmen wachsen - von eleganten
+      Unternehmenswebsites bis hin zu anspruchsvollen E-Commerce-Plattformen und komplexen Webanwendungen. Unsere
+      Expertise umfasst den gesamten Entwicklungszyklus und gewährleistet, dass Ihr Projekt mit Präzision, Sicherheit
+      und Performance im Fokus geliefert wird.
     </Fragment>
 
     <Fragment slot="bg">
@@ -115,23 +115,23 @@ const metadata = {
       {
         title: 'Projektübersicht',
         description:
-          'OdinBoost, eine Plattform für begeisterte Gamer, wurde von unserem Kollektiv zum Leben erweckt. Sie bietet Boosting-Dienste für beliebte Titel wie League of Legends, Valorant, TFT und Wild Rift. Unsere kollektive Anstrengung gewährleistete nahtlose Transaktionen und ein unvergleichliches Spielerlebnis.',
+          'EloHeaven benötigte eine umfassende Gaming-Boosting-Plattform mit Unterstützung für mehrere Wettbewerbsspiele wie League of Legends, Valorant und Rocket League. Wir lieferten eine Full-Stack-Lösung mit sicherer Zahlungsabwicklung, Echtzeit-Auftragsverfolgung, mehrsprachiger Unterstützung und ausgeklügelten Benutzer-Dashboards für Kunden und Dienstleister.',
       },
     ]}
     image={{
-      src: odinImg,
-      alt: 'odinboost website',
+      src: eloheavenImg,
+      alt: 'eloheaven gaming platform',
     }}
     callToAction={{
       target: '_blank',
       text: 'Zum Projekt',
       icon: 'tabler:chevron-right',
-      href: 'https://odinboost.com',
+      href: 'https://eloheaven.gg',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        OdinBoost <br /><span class="text-2xl">Maßgeschneiderter Webservice Shop</span>
+        EloHeaven <br /><span class="text-2xl">Gaming Services Plattform</span>
       </h3>
     </Fragment>
 
@@ -199,6 +199,39 @@ const metadata = {
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Statement-Clothing <br /><span class="text-2xl">Individuell gestalteter Shopify Shop</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+
+  <!-- Content Widget **************** -->
+
+  <Content2
+    callToAction={{
+      target: '_blank',
+      text: 'Zum Projekt',
+      icon: 'tabler:chevron-right',
+      href: 'https://odinboost.com',
+    }}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Projektübersicht',
+        description:
+          'Ähnlich wie EloHeaven benötigte OdinBoost eine umfassende Gaming-Services-Plattform mit sicherer Zahlungsabwicklung und Benutzerverwaltung. Wir lieferten eine maßgeschneiderte Webanwendung mit nahtlosen Transaktionen, Echtzeit-Service-Tracking und einer intuitiven Benutzererfahrung, die das Kundenengagement über mehrere Gaming-Titel hinweg fördert.',
+      },
+    ]}
+    image={{
+      src: odinImg,
+      alt: 'odinboost website',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OdinBoost <br /><span class="text-2xl">Gaming Services Plattform</span>
       </h3>
     </Fragment>
 

@@ -11,14 +11,14 @@ metadata:
   title:
     default: n3tz
     template: '%s | n3tz'
-  description: 'n3tz is a collective of passionate developers offering advanced web application development.'
+  description: 'n3tz is a professional web development studio creating custom digital solutions for businesses of all sizes - from elegant websites to complex web applications.'
   robots:
     index: true
     follow: true
   openGraph:
     site_name: n3tz
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/default.webp'
         width: 1200
         height: 628
     type: website

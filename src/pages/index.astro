@@ -7,12 +7,13 @@ import Content2 from '~/components/widgets/Content2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import AboutUsImage from '~/assets/images/about-us.png';
-import odinImg from '~/assets/images/odin.png';
-import statementImg from '~/assets/images/statement.png';
-import lendexeImg from '~/assets/images/lendexe.png';
+import AboutUsImage from '~/assets/images/about-us.webp';
+import odinImg from '~/assets/images/odin.webp';
+import statementImg from '~/assets/images/statement.webp';
+import lendexeImg from '~/assets/images/lendexe.webp';
+import eloheavenImg from '~/assets/images/eloheaven_home.webp';
 const metadata = {
-  title: 'n3tz - Innovative Web Application Development Collective',
+  title: 'n3tz - Professional Web Development Studio',
   ignoreTitleTemplate: true,
 };
 ---
@@ -31,14 +32,14 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Building <span class="text-accent highlight">Innovative Web Projects </span> Together
+      Transforming Ideas into <span class="text-accent highlight">Digital Reality</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Passionate about web development</span>, we are a collective of developers dedicated
-        to creating impactful digital solutions. Our team thrives on collaboration, learning, and pushing the boundaries
-        of web technology. With n3tz, join a community where your ideas and skills can flourish.
+        <span class="font-semibold">Professional web development studio</span> creating custom digital solutions for businesses
+        of all sizes. From elegant websites to complex web applications, we deliver scalable solutions that drive your business
+        forward.
       </span>
     </Fragment>
   </Hero2>
@@ -54,10 +55,10 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      At n3tz, we're more than just developers; we're a community driven by a passion for technology and
-      knowledge-sharing. Our mission is to collaborate on projects that inspire and educate, while continuously
-      advancing our skills. We specialize in developing innovative web applications through a collective effort,
-      blending creativity, expertise, and a love for coding. Join us in creating web solutions that make a difference.
+      n3tz is a professional web development studio dedicated to transforming your digital vision into reality. We
+      specialize in creating custom web solutions that scale with your business - from sleek corporate websites to
+      sophisticated e-commerce platforms and complex web applications. Our expertise spans the full development
+      lifecycle, ensuring your project is delivered with precision, security, and performance in mind.
     </Fragment>
 
     <Fragment slot="bg">
@@ -68,32 +69,33 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features
-    title="What Makes n3tz Special"
-    subtitle="At n3tz, we thrive on collective innovation and a shared passion for technology. Here’s why our community stands out:"
-    tagline="Our Principles"
+    title="Why Choose n3tz"
+    subtitle="We deliver professional web development services that scale with your business needs. Here's what sets us apart:"
+    tagline="Our Approach"
     items={[
       {
-        title: 'Collaborative Spirit',
+        title: 'Full-Stack Expertise',
         description:
-          'Our collective is dedicated to high-end web application development, with a focus on working together to tackle complex challenges.',
-        icon: 'tabler:users-group',
+          'Complete web development services from frontend design to backend architecture, ensuring seamless integration and optimal performance.',
+        icon: 'tabler:stack-2',
       },
       {
-        title: 'Personalized Projects',
+        title: 'Custom Solutions',
         description:
-          'We recognize the unique nature of each project. Our approach is to craft custom web applications that align with each member’s vision and goals.',
-        icon: 'tabler:highlight',
+          'Every project is unique. We craft tailored web solutions that align perfectly with your business goals and technical requirements.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'Holistic Development',
+        title: 'Scalable Architecture',
         description:
-          'From ideation to deployment, our comprehensive services ensure every aspect of development is expertly managed through collaborative effort.',
-        icon: 'tabler:bulb',
+          'From startup websites to enterprise applications, we build solutions that grow with your business and handle increasing demands.',
+        icon: 'tabler:trending-up',
       },
       {
-        title: 'Innovative Collaboration',
-        description: 'Combining our collective ideas with tech expertise to create groundbreaking web applications.',
-        icon: 'tabler:messages',
+        title: 'Modern Technology',
+        description:
+          'Leveraging cutting-edge frameworks and best practices to deliver fast, secure, and maintainable web solutions.',
+        icon: 'tabler:code',
       },
     ]}
   />
@@ -102,31 +104,31 @@ const metadata = {
 
   <Content2
     id="portfolio"
-    title="Projects Our Team Members Have Worked On"
-    tagline="Our Journey Together"
-    subtitle="Explore the innovative projects we’ve brought to life through collaboration and shared passion."
+    title="Featured Projects"
+    tagline="Our Work"
+    subtitle="Discover how we've helped businesses transform their digital presence with custom web solutions."
     isReversed
     items={[
       {
         title: 'Project Overview',
         description:
-          'OdinBoost, a platform envisioned for avid gamers, was brought to life by our collective. It offers boosting services for popular titles like League of Legends, Valorant, TFT, and Wild Rift. Our collective effort ensured seamless transactions and an unparalleled gaming experience.',
+          'EloHeaven required a comprehensive gaming boosting platform supporting multiple competitive games including League of Legends, Valorant, and Rocket League. We delivered a full-stack solution with secure payment processing, real-time order tracking, multi-language support, and sophisticated user dashboards for both customers and service providers.',
       },
     ]}
     image={{
-      src: odinImg,
-      alt: 'odinboost website',
+      src: eloheavenImg,
+      alt: 'eloheaven gaming platform',
     }}
     callToAction={{
       target: '_blank',
       text: 'Go to the project',
       icon: 'tabler:chevron-right',
-      href: 'https://odinboost.com',
+      href: 'https://eloheaven.gg',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        OdinBoost <br /><span class="text-2xl">Custom Web Service Shop</span>
+        EloHeaven <br /><span class="text-2xl">Gaming Services Platform</span>
       </h3>
     </Fragment>
 
@@ -149,7 +151,7 @@ const metadata = {
       {
         title: 'Project Overview',
         description:
-          'In collaboration with LendeXe Finance, our team played a pivotal role in enhancing their DeFi platform. Our co-founder led the Smart Contract development using Solidity, and our team built a scalable Node.js backend and a sophisticated React.js frontend, showcasing our capabilities in blockchain technology and web development.',
+          'LendeXe Finance needed a robust DeFi lending platform with advanced smart contract functionality. We delivered a complete solution including Solidity-based smart contracts, a scalable Node.js backend, and a sophisticated React.js frontend, demonstrating our expertise in blockchain technology and modern web development.',
       },
     ]}
     image={{
@@ -202,43 +204,76 @@ const metadata = {
     </Fragment>
   </Content2>
 
+  <!-- Content Widget **************** -->
+
+  <Content2
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: 'https://odinboost.com',
+    }}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Project Overview',
+        description:
+          'Similar to EloHeaven, OdinBoost required a comprehensive gaming services platform with secure payment processing and user management. We delivered a custom web application with seamless transactions, real-time service tracking, and an intuitive user experience that drives customer engagement across multiple gaming titles.',
+      },
+    ]}
+    image={{
+      src: odinImg,
+      alt: 'odinboost website',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OdinBoost <br /><span class="text-2xl">Gaming Services Platform</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content2>
+
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the unique approach and expertise of the n3tz collective."
+    subtitle="Learn more about our professional web development services and how we can help transform your digital presence."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Who is n3tz and what does n3tz do?',
+        title: 'What services does n3tz provide?',
         description:
-          'n3tz is a passionate collective of developers and designers specializing in creating innovative web applications. We focus on building sophisticated, functional web solutions driven by our love for technology and development.',
+          'n3tz is a professional web development studio specializing in custom digital solutions. We create everything from elegant business websites to complex web applications, e-commerce platforms, and blockchain-based solutions tailored to your specific needs.',
       },
       {
-        title: 'What sets n3tz apart in the web development industry?',
+        title: 'Can n3tz handle projects of any size?',
         description:
-          'What distinguishes n3tz is our collaborative spirit and commitment to innovation. We combine technical expertise with creative problem-solving to deliver web applications that are not only technically sound but also aligned with our collective vision.',
+          'Absolutely. We work with businesses of all sizes, from startups needing their first website to enterprises requiring complex web applications. Our scalable approach ensures we can deliver the right solution regardless of project scope or budget.',
       },
       {
-        title: 'Can n3tz develop web applications for specific industries or niches?',
+        title: 'What industries does n3tz serve?',
         description:
-          "Yes, n3tz members have experience in developing web applications across various industries and niches. Whether it's finance, gaming, e-commerce, or other sectors, we tailor our solutions to meet the unique challenges and requirements of each industry.",
+          "We have experience across diverse industries including finance, gaming, e-commerce, healthcare, and more. Our adaptable approach allows us to understand each industry's unique challenges and deliver solutions that meet specific regulatory and business requirements.",
       },
       {
-        title: 'How does n3tz ensure the security and data protection of its web applications?',
+        title: 'How does n3tz ensure project security and data protection?',
         description:
-          'At n3tz, security and data protection are paramount. We implement robust security protocols, including SSL encryption and secure payment integrations, and ensure compliance with data protection regulations to provide safe and reliable web solutions.',
+          'Security is fundamental to our development process. We implement industry-standard security protocols, SSL encryption, secure payment integrations, and ensure compliance with data protection regulations like GDPR to deliver safe and reliable web solutions.',
       },
       {
-        title: 'What technologies does n3tz specialize in for web application development?',
+        title: 'What technologies does n3tz use?',
         description:
-          'Our team is proficient in a range of modern technologies essential for cutting-edge web application development, including Node.js, React.js, and blockchain technologies like Solidity for smart contracts. This technical versatility allows us to build diverse and innovative web solutions.',
+          'We leverage modern, proven technologies including Node.js, React.js, TypeScript, and blockchain technologies like Solidity. Our tech stack is chosen based on project requirements to ensure optimal performance, scalability, and maintainability.',
       },
       {
-        title: 'How does n3tz handle the web development process from start to finish?',
+        title: 'What is the development process like?',
         description:
-          'Our process is comprehensive and collaborative, starting from understanding your vision, through the development phase, and to the final deployment. We maintain open communication, provide updates, and incorporate feedback to ensure the final product meets our collective standards.',
+          'Our process is transparent and collaborative. We start by understanding your vision and requirements, then move through design, development, testing, and deployment phases. We maintain regular communication, provide progress updates, and incorporate your feedback throughout the project.',
       },
     ]}
   />
@@ -249,20 +284,20 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get in touch now!',
+        text: 'Start Your Project',
         href: '/contact',
-        icon: 'tabler:mail',
+        icon: 'tabler:rocket',
       },
     ]}
   >
     <Fragment slot="title">
-      We are here to <span class="text-accent highlight">bring your ideas to life</span>.
+      Ready to <span class="text-accent highlight">transform your digital presence</span>?
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        We are a team of passionate developers and designers who love collaborating on innovative projects. Let's work
-        together to create something amazing.
+        Let's discuss your project requirements and explore how our web development expertise can help achieve your
+        business goals. Contact us today for a consultation.
       </span>
     </Fragment>
 
