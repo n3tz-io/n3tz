@@ -2,7 +2,7 @@
 publishDate: 2024-01-02T00:00:00Z
 title: Maximize Web Performance
 excerpt: Discover Astro's Advantage for Static Pages in Web Development
-image: https://camo.githubusercontent.com/cb398ee214e369af270bfffc8683e35beec06ce0302cb955e6c5d7a90be39ad6/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f76322f726573697a653a6669743a313335382f312a3769415a795a344d3975486f384748634762564844772e676966
+image: https://n3tz.io/img/astro-wallpaper.avif
 tags:
   - SEO
   - web performance

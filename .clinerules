@@ -1,0 +1,52 @@
+# n3tz.io Project Intelligence
+
+## Project Context
+This is a rebranding project for n3tz.io, a web development business website built with Astro. The goal is to move away from "collective" positioning to a more professional service provider image while maintaining technical credibility.
+
+## Key User Preferences
+- Likes the current design overall - keep visual aesthetic
+- Avoid the word "agency" unless absolutely necessary
+- Make it clear that n3tz can handle ANY size project (not just large ones)
+- Want more professional, modern copy
+- Need clear differentiation from personal brand (tarik.n3tz.io)
+
+## Technical Patterns
+- **Framework**: Astro 4.2.1 with TypeScript
+- **Styling**: Tailwind CSS with custom color scheme (hot pink/orange theme)
+- **Content**: Configuration-driven via src/config.yaml
+- **i18n**: 4 languages (EN, DE, FR, ES) with route-based structure
+- **Deployment**: Netlify auto-deploy from main branch
+
+## Content Strategy Insights
+- Current positioning as "collective of passionate developers" is too informal
+- Need to emphasize service range from small websites to enterprise applications
+- Portfolio projects (OdinBoost, LendeXe, Statement Clothing) are strong - keep but reframe
+- FAQ section needs updating to reflect new professional positioning
+
+## File Structure Patterns
+- Main content updates needed in: src/pages/index.astro, src/config.yaml
+- Multi-language versions in: src/pages/de/, src/pages/fr/, src/pages/es/
+- Component-based architecture with widgets for major page sections
+
+## Messaging Framework Direction
+- Position as "web development studio" or "development partner" 
+- Emphasize custom solutions for any project size
+- Maintain technical expertise credibility
+- Professional but approachable tone
+- Clear value proposition around turning ideas into digital reality
+
+## Memory Bank Structure
+Complete memory bank created with:
+- projectbrief.md: Core rebranding goals and constraints
+- productContext.md: What n3tz.io is and problems it solves
+- systemPatterns.md: Technical architecture and design patterns
+- techContext.md: Development environment and dependencies
+- activeContext.md: Current focus and rebranding decisions
+- progress.md: What works, issues, and implementation phases
+
+## Next Steps Pattern
+1. Content strategy finalization
+2. Hero section updates (highest impact)
+3. About section professional repositioning
+4. Service range clarification
+5. Multi-language rollout

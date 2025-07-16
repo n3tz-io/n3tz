@@ -9,7 +9,7 @@ tags:
   - React
   - n3tz
 canonical: https://n3tz.io/nextjs-a-comprehensive-guide
-image: https://www.datocms-assets.com/48401/1644864897-next-framework.jpeg?fit=max&w=900
+image: https://n3tz.io/img/nextjs-wallpaper.avif
 ---
 
 # **Unleashing Next.js in Web Development: A Comprehensive Guide**
