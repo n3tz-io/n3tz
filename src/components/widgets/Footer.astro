@@ -26,7 +26,7 @@ export interface Props {
   socialLinks: Array<Link>;
   footNote?: string;
   theme?: string;
-  resources: Array<Link>;
+  resources: Array<Links>;
 }
 
 const {
@@ -52,8 +52,8 @@ const {
             secondaryLinks.map(({ text, href, target }) => (
               <a
                 class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out mr-2 rtl:mr-0 rtl:ml-2"
-                href={`${lang != 'en' ? lang : ''}${href}`}
-                set:html={t(text)}
+                href={`${lang != 'en' ? '/' + lang : ''}${href}`}
+                set:html={text ? t(text as any) : ''}
                 target={target}
               />
             ))
@@ -63,18 +63,20 @@ const {
       {
         links.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+            <div class="dark:text-gray-300 font-medium mb-2">
+              <Fragment set:html={title ? t(title as any) : ''} />
+            </div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
                 {links.map(({ text, href, ariaLabel, target }) => (
                   <li class="mb-2">
                     <a
                       class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={`${lang != 'en' ? '/' + lang + href : href}`}
+                      href={href?.startsWith('http') ? href : `${lang != 'en' ? '/' + lang + href : href}`}
                       aria-label={ariaLabel}
                       target={target}
                     >
-                      <Fragment set:html={t(text)} />
+                      <Fragment set:html={text ? t(text as any) : ''} />
                     </a>
                   </li>
                 ))}
@@ -86,7 +88,9 @@ const {
       {
         resources.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+            <div class="dark:text-gray-300 font-medium mb-2">
+              <Fragment set:html={title ? t(title as any) : ''} />
+            </div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
                 {links.map(({ text, href, target }) => (
@@ -96,7 +100,7 @@ const {
                       href={href}
                       target={target}
                     >
-                      {text}
+                      <Fragment set:html={text ? t(text as any) : ''} />
                     </a>
                   </li>
                 ))}
@@ -122,7 +126,7 @@ const {
                   href={href}
                 >
                   {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={t(text)} />
+                  <Fragment set:html={text ? t(text as any) : ''} />
                 </a>
               </li>
             ))}
@@ -133,7 +137,7 @@ const {
       }
 
       <div class="text-sm mr-4 dark:text-slate-400">
-        <Fragment set:html={footNote} />
+        <Fragment set:html={footNote ? t(footNote as any) : ''} />
       </div>
     </div>
   </div>

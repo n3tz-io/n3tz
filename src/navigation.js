@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -34,7 +34,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Pages',
+      title: 'footer.pages',
       links: [
         {
           text: 'nav.home',
@@ -51,34 +51,34 @@ export const footerData = {
       ],
     },
     {
-      title: 'Team',
+      title: 'footer.founder',
       links: [
         {
           text: 'tarik',
           href: 'https://tarik.n3tz.io',
-          target: '_blank'
-        }
-      ]
-    }
+          target: '_blank',
+        },
+      ],
+    },
   ],
-  resources : [
+  resources: [
     {
-      title: 'Resources',
+      title: 'footer.resources',
       links: [
         {
-          text: "Privacy Policy",
+          text: 'footer.privacy',
           href: '/privacy',
         },
         {
-          text: "Terms of Service",
+          text: 'footer.terms',
           href: '/termsofservice',
         },
         {
-          text: "Refund Policy",
+          text: 'footer.refund',
           href: '/refund',
         },
         {
-          text: "Cookie Policy",
+          text: 'footer.cookie',
           href: '/cookie',
         },
       ],
@@ -95,7 +95,5 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/n3tz-io', target: '_blank' },
     { ariaLabel: 'Medium', icon: 'tabler:brand-medium', href: 'https://n3tz.medium.com', target: '_blank' },
   ],
-  footNote: `
-   \u00A92024 n3tz, Ltd. · All rights reserved.
-  `,
+  footNote: 'footer.copyright',
 };
