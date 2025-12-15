@@ -1,9 +1,38 @@
-import type { PaginateFunction } from 'astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from '~/utils/config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
+
+// PaginateFunction type for Astro 5
+type PaginateFunction = <PaginateData>(
+  data: readonly PaginateData[],
+  args?: {
+    params?: Record<string, string | undefined>;
+    pageSize?: number;
+    props?: Record<string, unknown>;
+  }
+) => {
+  params: Record<string, string | undefined>;
+  props: {
+    page: {
+      data: PaginateData[];
+      start: number;
+      end: number;
+      total: number;
+      currentPage: number;
+      size: number;
+      lastPage: number;
+      url: {
+        current: string;
+        prev: string | undefined;
+        next: string | undefined;
+        first: string | undefined;
+        last: string | undefined;
+      };
+    };
+  };
+}[];
 
 const generatePermalink = async ({
   id,
@@ -41,8 +70,9 @@ const generatePermalink = async ({
 };
 
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
-  const { id, slug: rawSlug = '', data } = post;
-  const { Content, remarkPluginFrontmatter } = await post.render();
+  const { id, data } = post;
+  const rawSlug = post.id || '';
+  const { Content, remarkPluginFrontmatter } = await render(post);
 
   const {
     publishDate: rawPublishDate = new Date(),

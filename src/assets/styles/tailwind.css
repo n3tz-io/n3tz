@@ -1,56 +1,253 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
-@layer utilities {
-  .bg-page {
-    background-color: var(--aw-color-bg-page);
-  }
-  .bg-dark {
-    background-color: var(--aw-color-bg-page-dark);
-  }
-  .bg-light {
-    background-color: var(--aw-color-bg-page-light);
-  }
-  .text-page {
-    color: var(--aw-color-text-page);
-  }
-  .text-muted {
-    color: var(--aw-color-text-muted);
-  }
+/* 
+ * Tailwind v4 CSS-first configuration
+ * Theme customizations using @theme directive
+ */
+@theme {
+  /* Custom colors referencing CSS variables from CustomStyles.astro */
+  --color-primary: var(--aw-color-primary);
+  --color-secondary: var(--aw-color-secondary);
+  --color-accent: var(--aw-color-accent);
+  --color-default: var(--aw-color-text-default);
+  --color-muted: var(--aw-color-text-muted);
+
+  /* Font families referencing CSS variables */
+  --font-sans:
+    var(--aw-font-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --font-serif: var(--aw-font-serif), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-heading: var(--aw-font-heading), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Custom utility classes */
+@utility bg-page {
+  background-color: var(--aw-color-bg-page);
+}
+
+@utility bg-dark {
+  background-color: var(--aw-color-bg-page-dark);
+}
+
+@utility bg-light {
+  background-color: var(--aw-color-bg-page-light);
+}
+
+@utility text-page {
+  color: var(--aw-color-text-page);
+}
+
+@utility text-muted {
+  color: var(--aw-color-text-muted);
+}
+
+/* 
+ * Component styles - using plain CSS instead of @apply for base btn
+ * to avoid circular reference issues in Tailwind v4
+ */
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgb(156 163 175);
+    background-color: transparent;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.375;
+    color: var(--aw-color-text-page);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .btn {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .btn:focus {
+    --tw-ring-color: rgb(59 130 246);
+    --tw-ring-offset-color: rgb(191 219 254);
+    --tw-ring-offset-width: 2px;
+    --tw-ring-width: 2px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow, 0 0 #0000);
+  }
+
+  .btn:hover {
+    background-color: rgb(243 244 246);
+    border-color: rgb(75 85 99);
+  }
+
+  :is(.dark .btn) {
+    color: rgb(203 213 225);
+    border-color: rgb(100 116 139);
+  }
+
+  :is(.dark .btn:hover) {
+    background-color: rgb(30 41 59);
+    border-color: rgb(30 41 59);
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.375;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    background-color: var(--aw-color-primary);
+    color: white;
+    border: 1px solid var(--aw-color-primary);
+  }
+
+  @media (min-width: 768px) {
+    .btn-primary {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .btn-primary:hover {
+    background-color: var(--aw-color-secondary);
+    border-color: var(--aw-color-secondary);
+    color: white;
+  }
+
+  :is(.dark .btn-primary) {
+    color: white;
+    background-color: var(--aw-color-primary);
+    border-color: var(--aw-color-primary);
+  }
+
+  :is(.dark .btn-primary:hover) {
+    border-color: var(--aw-color-secondary);
+    background-color: var(--aw-color-secondary);
   }
 
   .btn-secondary {
-    @apply btn;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgb(156 163 175);
+    background-color: transparent;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.375;
+    color: var(--aw-color-text-page);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .btn-secondary {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .btn-secondary:hover {
+    background-color: rgb(243 244 246);
+    border-color: rgb(75 85 99);
+  }
+
+  :is(.dark .btn-secondary) {
+    color: rgb(203 213 225);
+    border-color: rgb(100 116 139);
+  }
+
+  :is(.dark .btn-secondary:hover) {
+    background-color: rgb(30 41 59);
+    border-color: rgb(30 41 59);
   }
 
   .btn-tertiary {
-    @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.375;
+    color: var(--aw-color-text-muted);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  @media (min-width: 768px) {
+    .btn-tertiary {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .btn-tertiary:hover {
+    color: rgb(17 24 39);
+  }
+
+  :is(.dark .btn-tertiary) {
+    color: rgb(156 163 175);
+  }
+
+  :is(.dark .btn-tertiary:hover) {
+    color: white;
   }
 }
 
+/* Header scroll styles */
 #header.scroll > div:first-child {
-  @apply bg-page md:bg-white/90 md:backdrop-blur-md;
+  background-color: var(--aw-color-bg-page);
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
 }
+
+@media (min-width: 768px) {
+  #header.scroll > div:first-child {
+    background-color: rgb(255 255 255 / 0.9);
+    backdrop-filter: blur(12px);
+  }
+}
+
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-[#030621e6] border-b border-gray-500/20;
+  background-color: var(--aw-color-bg-page);
+  border-bottom: 1px solid rgb(107 114 128 / 0.2);
   box-shadow: none;
 }
-/* #header.scroll > div:last-child {
-  @apply py-3;
-} */
 
+@media (min-width: 768px) {
+  .dark #header.scroll > div:first-child,
+  #header.scroll.dark > div:first-child {
+    background-color: #030621e6;
+  }
+}
+
+/* Header expanded nav styles */
 #header.expanded nav {
   position: fixed;
   top: 70px;
@@ -60,10 +257,12 @@
   padding: 0 5px;
 }
 
+/* Dropdown menu styles */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
+/* Icon styles */
 [astro-icon].icon-light > * {
   stroke-width: 1.2;
 }
@@ -72,19 +271,22 @@
   stroke-width: 2.4;
 }
 
+/* Toggle menu animation */
 [data-aw-toggle-menu] path {
-  @apply transition;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
+
 [data-aw-toggle-menu].expanded g > path:first-child {
-  @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+  transform: rotate(-45deg) translateY(15px) translateX(-3px);
 }
 
 [data-aw-toggle-menu].expanded g > path:last-child {
-  @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+  transform: rotate(45deg) translateY(-8px) translateX(14px);
 }
 
-/* To deprecated */
-
+/* Deprecated - To be removed */
 .dd *:first-child {
   margin-top: 0;
 }
