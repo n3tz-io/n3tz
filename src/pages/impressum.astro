@@ -1,0 +1,129 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content3.astro';
+const metadata = {
+  title: 'n3tz - Legal Notice / Imprint',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout {...metadata}>
+  <div class="flex justify-center items-center">
+    <Content title="Legal Notice">
+      <Fragment slot="content">
+        <div class="flex flex-col gap-6 text-base">
+          
+          <!-- Information according to § 5 DDG -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Information according to § 5 DDG (German Digital Services Act)</h2>
+            <address class="not-italic">
+              <p class="font-semibold">n3tz</p>
+              <p>Tarik Ermis</p>
+              <p>Kaiserstr. 27</p>
+              <p>66333 Völklingen</p>
+              <p>Germany</p>
+            </address>
+          </section>
+
+          <!-- Contact -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Contact</h2>
+            <p>Phone: <a href="tel:+4915737532227" class="text-primary hover:underline">+49 157 37532227</a></p>
+            <p>Email: <a href="mailto:mail@n3tz.io" class="text-primary hover:underline">mail@n3tz.io</a></p>
+          </section>
+
+          <!-- VAT ID -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">VAT Identification Number</h2>
+            <p>VAT identification number according to § 27 a of the German VAT Act:</p>
+            <p class="font-semibold">DE351837941</p>
+          </section>
+
+          <!-- Responsible for content -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Responsible for content according to § 18 para. 2 MStV</h2>
+            <p>Tarik Ermis</p>
+            <p>Kaiserstr. 27</p>
+            <p>66333 Völklingen</p>
+          </section>
+
+          <!-- EU Online Dispute Resolution -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">EU Online Dispute Resolution</h2>
+            <p>
+              The European Commission provides a platform for online dispute resolution (ODR):
+              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                https://ec.europa.eu/consumers/odr/
+              </a>
+            </p>
+            <p class="mt-2">Our email address can be found above in the legal notice.</p>
+          </section>
+
+          <!-- Consumer Dispute Resolution -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Consumer Dispute Resolution / Universal Arbitration Board</h2>
+            <p>
+              We are neither willing nor obligated to participate in dispute resolution proceedings
+              before a consumer arbitration board.
+            </p>
+          </section>
+
+          <!-- Liability for Content -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Liability for Content</h2>
+            <p>
+              As a service provider, we are responsible for our own content on these pages in accordance
+              with § 7 para. 1 DDG and general laws. However, according to §§ 8 to 10 DDG, we are not
+              obligated as a service provider to monitor transmitted or stored third-party information
+              or to investigate circumstances that indicate illegal activity.
+            </p>
+            <p class="mt-2">
+              Obligations to remove or block the use of information under general laws remain unaffected.
+              However, liability in this regard is only possible from the time of knowledge of a specific
+              legal violation. Upon becoming aware of such violations, we will remove this content immediately.
+            </p>
+          </section>
+
+          <!-- Liability for Links -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Liability for Links</h2>
+            <p>
+              Our offer contains links to external third-party websites over whose content we have no
+              influence. Therefore, we cannot assume any liability for this external content. The respective
+              provider or operator of the pages is always responsible for the content of the linked pages.
+              The linked pages were checked for possible legal violations at the time of linking. Illegal
+              content was not identifiable at the time of linking.
+            </p>
+            <p class="mt-2">
+              However, permanent content control of the linked pages is not reasonable without concrete
+              evidence of a legal violation. Upon becoming aware of legal violations, we will remove such
+              links immediately.
+            </p>
+          </section>
+
+          <!-- Copyright -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Copyright</h2>
+            <p>
+              The content and works created by the site operators on these pages are subject to German
+              copyright law. Reproduction, processing, distribution, and any kind of exploitation beyond
+              the limits of copyright law require the written consent of the respective author or creator.
+              Downloads and copies of this page are only permitted for private, non-commercial use.
+            </p>
+            <p class="mt-2">
+              Insofar as the content on this page was not created by the operator, the copyrights of third
+              parties are respected. In particular, third-party content is identified as such. Should you
+              nevertheless become aware of a copyright infringement, please inform us accordingly. Upon
+              becoming aware of legal violations, we will remove such content immediately.
+            </p>
+          </section>
+
+        </div>
+      </Fragment>
+
+      <Fragment class="flex justify-center" slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      </Fragment>
+    </Content>
+  </div>
+</Layout>

@@ -81,6 +81,10 @@ export const footerData = {
           text: 'footer.cookie',
           href: '/cookie',
         },
+        {
+          text: 'footer.imprint',
+          href: '/impressum',
+        },
       ],
     },
   ],

@@ -9,6 +9,13 @@ function capitalizeFirstLetter(string) {
 const lang = getLangFromUrl(Astro.url);
 const initLocale = new Intl.Locale(lang);
 const initLang = capitalizeFirstLetter(new Intl.DisplayNames([lang], { type: 'language' }).of(initLocale.language));
+
+// Get the current page path without the language prefix
+const pathname = Astro.url.pathname;
+const pathParts = pathname.split('/').filter(Boolean);
+const currentLang = locales.includes(pathParts[0]) ? pathParts[0] : null;
+const pagePath = currentLang ? '/' + pathParts.slice(1).join('/') : pathname;
+
 export interface Props {
   id?: string;
   defaultLang?: string;
@@ -19,6 +26,15 @@ const { id = 'language-picker', defaultLang = 'en', flagSelector = false } = Ast
 function getFlagSrc(countryCode) {
   if (countryCode === 'en') countryCode = 'us';
   return `https://flagsapi.com/${countryCode.toUpperCase()}/flat/32.png`;
+}
+
+// Helper to build language-specific URL
+function getLocalizedUrl(locale: string) {
+  const path = pagePath === '/' ? '' : pagePath;
+  if (locale === 'en') {
+    return path || '/';
+  }
+  return `/${locale}${path}`;
 }
 ---
 
@@ -42,9 +58,9 @@ function getFlagSrc(countryCode) {
     </div>
   ) : (
     <ul>
-      {Object.entries(languages).map(([lang, label]) => (
+      {Object.entries(languages).map(([langCode, label]) => (
         <li>
-          <a href={`/${lang != 'en' ? lang : ''}`} class="no-underline">
+          <a href={getLocalizedUrl(langCode)} class="no-underline">
             {label}
           </a>
         </li>
@@ -61,25 +77,56 @@ function getFlagSrc(countryCode) {
     return `https://flagsapi.com/${countryCode.toUpperCase()}/flat/32.png`;
   }
 
-  function setSelectedLocale(locale) {
-    const intlLocale = new Intl.Locale(locale);
-    const langName = new Intl.DisplayNames([locale], {
-      type: 'language',
-    }).of(intlLocale.language);
+  function getCurrentLocale() {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    // Check if the first path segment is a known locale
+    if (pathParts.length > 0 && locales.includes(pathParts[0])) {
+      return pathParts[0];
+    }
+    // Default to English if no locale prefix found
+    return 'en';
+  }
 
-    const otherLocales = locales.filter((loc) => loc !== locale);
+  function getLocalizedUrl(locale: string, currentPath: string) {
+    // Get path parts and determine current language
+    const pathParts = currentPath.split('/').filter(Boolean);
+    const currentLang = locales.includes(pathParts[0]) ? pathParts[0] : null;
+    const pagePath = currentLang ? '/' + pathParts.slice(1).join('/') : currentPath;
+    const path = pagePath === '/' ? '' : pagePath;
+    
+    if (locale === 'en') {
+      return path || '/';
+    }
+    return `/${locale}${path}`;
+  }
+
+  function setupLanguagePicker() {
+    const currentLocale = getCurrentLocale();
+    
+    // Get all locales except the current one
+    const otherLocales = locales.filter((loc) => loc !== currentLocale);
+    
     otherLocales.forEach((otherLocale) => {
-      const otherIntlLocale = new Intl.Locale(otherLocale);
-      const otherLangName = new Intl.DisplayNames([otherLocale], {
-        type: 'language',
-      }).of(otherIntlLocale.language);
       const listEl = document.querySelector(`#locale-${otherLocale}`);
-      listEl.addEventListener('mousedown', function () {
-        window.location.href = `/${otherLocale !== 'en' ? otherLocale : ''}`;
-      });
+      if (listEl) {
+        // Remove any existing listeners by cloning the element
+        const newListEl = listEl.cloneNode(true);
+        listEl.parentNode?.replaceChild(newListEl, listEl);
+        
+        newListEl.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = getLocalizedUrl(otherLocale, window.location.pathname);
+        });
+      }
     });
   }
-  setSelectedLocale(window.location.pathname.split('/')[1] || locales[0]);
+  
+  // Run on page load
+  setupLanguagePicker();
+  
+  // Also run after Astro page transitions (for View Transitions)
+  document.addEventListener('astro:page-load', setupLanguagePicker);
 </script>
 
 <style>

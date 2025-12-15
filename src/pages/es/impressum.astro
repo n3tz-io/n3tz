@@ -1,0 +1,133 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content3.astro';
+const metadata = {
+  title: 'n3tz - Aviso legal',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout {...metadata}>
+  <div class="flex justify-center items-center">
+    <Content title="Aviso legal">
+      <Fragment slot="content">
+        <div class="flex flex-col gap-6 text-base">
+          
+          <!-- Información según § 5 DDG -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Información según § 5 DDG (Ley alemana de servicios digitales)</h2>
+            <address class="not-italic">
+              <p class="font-semibold">n3tz</p>
+              <p>Tarik Ermis</p>
+              <p>Kaiserstr. 27</p>
+              <p>66333 Völklingen</p>
+              <p>Alemania</p>
+            </address>
+          </section>
+
+          <!-- Contacto -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Contacto</h2>
+            <p>Teléfono: <a href="tel:+4915737532227" class="text-primary hover:underline">+49 157 37532227</a></p>
+            <p>Correo electrónico: <a href="mailto:mail@n3tz.io" class="text-primary hover:underline">mail@n3tz.io</a></p>
+          </section>
+
+          <!-- Número de IVA -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Número de identificación del IVA</h2>
+            <p>Número de identificación del impuesto sobre el valor añadido según § 27 a de la Ley alemana del IVA:</p>
+            <p class="font-semibold">DE351837941</p>
+          </section>
+
+          <!-- Responsable del contenido -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Responsable del contenido según § 18 párr. 2 MStV</h2>
+            <p>Tarik Ermis</p>
+            <p>Kaiserstr. 27</p>
+            <p>66333 Völklingen</p>
+          </section>
+
+          <!-- Resolución de disputas en línea de la UE -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Resolución de disputas en línea de la UE</h2>
+            <p>
+              La Comisión Europea proporciona una plataforma para la resolución de disputas en línea (ODR):
+              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                https://ec.europa.eu/consumers/odr/
+              </a>
+            </p>
+            <p class="mt-2">Nuestra dirección de correo electrónico se encuentra arriba en el aviso legal.</p>
+          </section>
+
+          <!-- Resolución de disputas de consumidores -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Resolución de disputas de consumidores / Organismo de arbitraje universal</h2>
+            <p>
+              No estamos dispuestos ni obligados a participar en procedimientos de resolución de disputas 
+              ante un organismo de arbitraje de consumidores.
+            </p>
+          </section>
+
+          <!-- Responsabilidad por el contenido -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Responsabilidad por el contenido</h2>
+            <p>
+              Como proveedor de servicios, somos responsables de nuestro propio contenido en estas páginas 
+              de acuerdo con el § 7 párr. 1 DDG y las leyes generales. Sin embargo, según los §§ 8 a 10 DDG, 
+              no estamos obligados como proveedor de servicios a supervisar la información transmitida o 
+              almacenada por terceros o a investigar circunstancias que indiquen una actividad ilegal.
+            </p>
+            <p class="mt-2">
+              Las obligaciones de eliminar o bloquear el uso de información de acuerdo con las leyes generales 
+              permanecen inalteradas. Sin embargo, la responsabilidad a este respecto solo es posible a partir 
+              del momento en que tengamos conocimiento de una infracción legal específica. Tan pronto como 
+              tengamos conocimiento de tales infracciones, eliminaremos inmediatamente este contenido.
+            </p>
+          </section>
+
+          <!-- Responsabilidad por enlaces -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Responsabilidad por enlaces</h2>
+            <p>
+              Nuestra oferta contiene enlaces a sitios web externos de terceros sobre cuyo contenido no tenemos 
+              ninguna influencia. Por lo tanto, no podemos asumir ninguna responsabilidad por estos contenidos 
+              externos. El proveedor u operador respectivo de las páginas es siempre responsable del contenido 
+              de las páginas enlazadas. Las páginas enlazadas fueron verificadas en busca de posibles 
+              infracciones legales en el momento del enlace. No se identificó contenido ilegal en el momento 
+              del enlace.
+            </p>
+            <p class="mt-2">
+              Sin embargo, un control permanente del contenido de las páginas enlazadas no es razonable sin 
+              indicios concretos de una infracción legal. Tan pronto como tengamos conocimiento de infracciones 
+              legales, eliminaremos inmediatamente dichos enlaces.
+            </p>
+          </section>
+
+          <!-- Derechos de autor -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Derechos de autor</h2>
+            <p>
+              El contenido y las obras creadas por los operadores del sitio en estas páginas están sujetos a 
+              la ley alemana de derechos de autor. La reproducción, el procesamiento, la distribución y 
+              cualquier forma de explotación más allá de los límites de los derechos de autor requieren el 
+              consentimiento por escrito del autor o creador respectivo. Las descargas y copias de esta página 
+              solo están permitidas para uso privado y no comercial.
+            </p>
+            <p class="mt-2">
+              En la medida en que el contenido de esta página no haya sido creado por el operador, se respetan 
+              los derechos de autor de terceros. En particular, los contenidos de terceros se identifican como 
+              tales. Si tiene conocimiento de una infracción de derechos de autor, le rogamos que nos lo 
+              comunique. Tan pronto como tengamos conocimiento de infracciones legales, eliminaremos 
+              inmediatamente dicho contenido.
+            </p>
+          </section>
+
+        </div>
+      </Fragment>
+
+      <Fragment class="flex justify-center" slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      </Fragment>
+    </Content>
+  </div>
+</Layout>
