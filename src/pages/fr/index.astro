@@ -3,16 +3,12 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
-import Content2 from '~/components/widgets/Content2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import AboutUsImage from '~/assets/images/about-us.webp';
-import odinImg from '~/assets/images/odin.webp';
-import statementImg from '~/assets/images/statement.webp';
-import lendexeImg from '~/assets/images/lendexe.webp';
-import eloheavenImg from '~/assets/images/eloheaven_home.webp';
 const metadata = {
   title: 'n3tz - Studio de développement web professionnel',
   description:
@@ -111,142 +107,57 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps Widget ****************** -->
+  <!-- Portfolio Widget ****************** -->
 
-  <Content2
+  <Features2
     id="portfolio"
-    title="Projets sur lesquels nos membres de l'équipe ont travaillé"
-    tagline="Notre voyage ensemble"
-    subtitle="Explorez les projets innovants que nous avons réalisés grâce à la collaboration et à la passion partagée."
-    isReversed
+    title="Notre Expertise"
+    tagline="Ce que nous construisons"
+    subtitle="Nous avons livré des solutions dans diverses industries. Voici un aperçu des catégories de projets dans lesquelles nous nous spécialisons."
+    columns={3}
     items={[
       {
-        title: 'Aperçu du Projet',
+        title: 'Solutions Enterprise & Industrielles',
         description:
-          'EloHeaven nécessitait une plateforme complète de boosting gaming supportant plusieurs jeux compétitifs comme League of Legends, Valorant et Marvel Rivals. Nous avons livré une solution full-stack avec traitement sécurisé des paiements, suivi des commandes en temps réel, support multilingue et tableaux de bord sophistiqués pour les clients et prestataires de services.',
+          "Plateformes digitales à grande échelle pour les entreprises Fortune 500. Systèmes de design personnalisés, intégration d'IA conversationnelle, tableaux de bord génératifs, infrastructure de data lake et architectures multi-tenant servant des milliers d'utilisateurs enterprise.<br/><br/><strong>Points forts:</strong> 15+ sous-projets livrés, écosystèmes Vue/React, APIs GraphQL, orchestration Docker",
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'Plateformes Gaming & Esports',
+        description:
+          "Marketplaces gaming à fort trafic et plateformes communautaires. Systèmes de commandes en temps réel, paiements multi-devises, tableaux de bord basés sur les rôles et infrastructure qui s'adapte pendant les pics de saison gaming.<br/><br/><strong>Points forts:</strong> 4 plateformes majeures, millions d'utilisateurs servis, systèmes WebSocket temps réel",
+        icon: 'tabler:device-gamepad-2',
+      },
+      {
+        title: "Outils IA & Automatisation",
+        description:
+          "Solutions intelligentes propulsées par l'IA de pointe. Assistants vocaux avec traitement du langage naturel, systèmes multi-agents, workflows automatisés et outils de traduction IA utilisés par des milliers de développeurs.<br/><br/><strong>Points forts:</strong> Google Gemini, OpenAI, architectures multi-agents, outils publiés sur npm",
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'E-Commerce & Marketplaces',
+        description:
+          "Plateformes e-commerce internationales avec support multilingue. Pipelines de traduction propulsés par IA, gestion d'inventaire en temps réel, traitement sécurisé des paiements et flux de checkout optimisés.<br/><br/><strong>Points forts:</strong> Support 9 langues, optimisation Cloudflare, backends personnalisés",
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Applications Blockchain & DeFi',
+        description:
+          "Plateformes de finance décentralisée et intégrations blockchain. Écosystèmes de tokens, interfaces de smart contracts, connexions wallet sécurisées et visualisation de données de marché en temps réel.<br/><br/><strong>Points forts:</strong> Intégrations Web3, protocoles DeFi, transactions sécurisées",
+        icon: 'tabler:currency-bitcoin',
+      },
+      {
+        title: 'Open Source & Outils Développeur',
+        description:
+          "Packages et outils publiés utilisés par la communauté développeur. Modules de consentement aux cookies conformes au RGPD, CLIs de traduction i18n propulsés par IA et contributions à l'écosystème Nuxt/Vue.<br/><br/><strong>Points forts:</strong> Publié sur npm, étoiles GitHub, contributions communautaires",
+        icon: 'tabler:brand-github',
       },
     ]}
-    image={{
-      src: eloheavenImg,
-      alt: 'plateforme gaming eloheaven',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://eloheaven.gg',
-    }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        EloHeaven <br /><span class="text-2xl">Plateforme de Services Gaming</span>
-      </h3>
-    </Fragment>
-
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content2>
-
-  <!-- Content Widget **************** -->
-
-  <Content2
-    isAfterContent={true}
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://lendexe.fi',
-    }}
-    items={[
-      {
-        title: 'Aperçu du Projet',
-        description:
-          "En collaboration avec LendeXe Finance, notre équipe a joué un rôle crucial dans l'amélioration de leur plateforme DeFi. Notre co-fondateur a dirigé le développement de Smart Contracts en utilisant Solidity et notre équipe a construit un backend évolutif en Node.js et un frontend sophistiqué en React.js, démontrant nos capacités en technologie blockchain et développement web.",
-      },
-    ]}
-    image={{
-      src: lendexeImg,
-      alt: 'plateforme lendexe finance',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        LendeXe Finance <br /><span class="text-2xl">Protocole DeFi de prêt Web3</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content2>
-
-  <!-- Content Widget **************** -->
-
-  <Content2
-    isReversed
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://statement-clo.de',
-    }}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Aperçu du Projet',
-        description:
-          "Lorsque statement.clo, un fournisseur de vêtements uniques et contemporains, a eu besoin d'un relooking digital, notre équipe est intervenue. Nous avons soigneusement réimaginé leur présence en ligne, en nous concentrant sur l'expérience utilisateur, la rapidité du site et un processus de paiement optimisé. Le résultat ? Chaque collection lancée après la refonte a été épuisée, ce qui se traduit par une augmentation des ventes et une satisfaction client accrue.",
-      },
-    ]}
-    image={{
-      src: statementImg,
-      alt: 'site web de statement clothing',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Statement-Clothing <br /><span class="text-2xl">Boutique Shopify personnalisée</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content2>
-
-  <!-- Content Widget **************** -->
-
-  <Content2
-    callToAction={{
-      target: '_blank',
-      text: 'Aller au projet',
-      icon: 'tabler:chevron-right',
-      href: 'https://odinboost.com',
-    }}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Aperçu du Projet',
-        description:
-          "Similaire à EloHeaven, OdinBoost nécessitait une plateforme complète de services gaming avec traitement sécurisé des paiements et gestion des utilisateurs. Nous avons livré une application web sur mesure avec transactions fluides, suivi des services en temps réel et une expérience utilisateur intuitive qui stimule l'engagement client sur plusieurs titres de jeux.",
-      },
-    ]}
-    image={{
-      src: odinImg,
-      alt: "site web d'odinboost",
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        OdinBoost <br /><span class="text-2xl">Plateforme de Services Gaming</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content2>
+  </Features2>
 
   <!-- FAQs Widget ******************* -->
 

@@ -2,16 +2,12 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
-import Content2 from '~/components/widgets/Content2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import AboutUsImage from '~/assets/images/about-us.webp';
-import odinImg from '~/assets/images/odin.webp';
-import statementImg from '~/assets/images/statement.webp';
-import lendexeImg from '~/assets/images/lendexe.webp';
-import eloheavenImg from '~/assets/images/eloheaven_home.webp';
 const metadata = {
   title: 'n3tz - Professional Web Development Studio',
   ignoreTitleTemplate: true,
@@ -107,142 +103,57 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps Widget ****************** -->
+  <!-- Portfolio Widget ****************** -->
 
-  <Content2
+  <Features2
     id="portfolio"
-    title="Featured Projects"
-    tagline="Our Work"
-    subtitle="Discover how we've helped businesses transform their digital presence with custom web solutions."
-    isReversed
+    title="Our Expertise"
+    tagline="What We Build"
+    subtitle="We've delivered solutions across diverse industries. Here's a look at the categories of projects we specialize in."
+    columns={3}
     items={[
       {
-        title: 'Project Overview',
+        title: 'Enterprise & Industrial Solutions',
         description:
-          'EloHeaven required a comprehensive gaming boosting platform supporting multiple competitive games including League of Legends, Valorant, and Marvel Rivals. We delivered a full-stack solution with secure payment processing, real-time order tracking, multi-language support, and sophisticated user dashboards for both customers and service providers.',
+          'Large-scale digital platforms for Fortune 500 companies. Custom design systems, conversational AI integration, generative dashboards, data lake infrastructure, and multi-tenant architectures serving thousands of enterprise users.<br/><br/><strong>Highlights:</strong> 15+ sub-projects delivered, Vue/React ecosystems, GraphQL APIs, Docker orchestration',
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'Gaming & Esports Platforms',
+        description:
+          'High-traffic gaming marketplaces and community platforms. Real-time order systems, multi-currency payments, role-based dashboards, and infrastructure that scales during peak gaming seasons.<br/><br/><strong>Highlights:</strong> 4 major platforms, millions of users served, real-time WebSocket systems',
+        icon: 'tabler:device-gamepad-2',
+      },
+      {
+        title: 'AI & Automation Tools',
+        description:
+          'Intelligent solutions powered by cutting-edge AI. Voice assistants with natural language processing, multi-agent systems, automated workflows, and AI-powered translation tools used by thousands of developers.<br/><br/><strong>Highlights:</strong> Google Gemini, OpenAI, multi-agent architectures, npm-published tools',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'E-Commerce & Marketplaces',
+        description:
+          'International e-commerce platforms with multilingual support. AI-powered translation pipelines, real-time inventory management, secure payment processing, and optimized checkout flows.<br/><br/><strong>Highlights:</strong> 9-language support, Cloudflare optimization, custom backends',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Blockchain & DeFi Applications',
+        description:
+          'Decentralized finance platforms and blockchain integrations. Token ecosystems, smart contract interfaces, secure wallet connections, and real-time market data visualization.<br/><br/><strong>Highlights:</strong> Web3 integrations, DeFi protocols, secure transactions',
+        icon: 'tabler:currency-bitcoin',
+      },
+      {
+        title: 'Open Source & Developer Tools',
+        description:
+          'Published packages and tools used by the developer community. GDPR-compliant cookie consent modules, AI-powered i18n translation CLIs, and contributions to the Nuxt/Vue ecosystem.<br/><br/><strong>Highlights:</strong> npm published, GitHub stars, community contributions',
+        icon: 'tabler:brand-github',
       },
     ]}
-    image={{
-      src: eloheavenImg,
-      alt: 'eloheaven gaming platform',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: 'https://eloheaven.gg',
-    }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        EloHeaven <br /><span class="text-2xl">Gaming Services Platform</span>
-      </h3>
-    </Fragment>
-
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content2>
-
-  <!-- Content Widget **************** -->
-
-  <Content2
-    isAfterContent={true}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: 'https://lendexe.fi',
-    }}
-    items={[
-      {
-        title: 'Project Overview',
-        description:
-          'LendeXe Finance needed a robust DeFi lending platform with advanced smart contract functionality. We delivered a complete solution including Solidity-based smart contracts, a scalable Node.js backend, and a sophisticated React.js frontend, demonstrating our expertise in blockchain technology and modern web development.',
-      },
-    ]}
-    image={{
-      src: lendexeImg,
-      alt: 'lendexe finance platform',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        LendeXe Finance <br /><span class="text-2xl">Web3 Lending DeFi Protocol</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content2>
-
-  <!-- Content Widget **************** -->
-
-  <Content2
-    isReversed
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: 'https://statement-clo.de',
-    }}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Project Overview',
-        description:
-          'When statement.clo, a purveyor of unique and contemporary apparel, sought a digital facelift, our team stepped in. We meticulously reimagined their online presence, focusing on user experience, site speed, and a streamlined checkout process. The results? Every collection drop post-redesign has witnessed a sell-out, translating to soaring sales and enhanced customer satisfaction.',
-      },
-    ]}
-    image={{
-      src: statementImg,
-      alt: 'statement clothing website',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Statement-Clothing <br /><span class="text-2xl">Custom Design Shopify Shop</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content2>
-
-  <!-- Content Widget **************** -->
-
-  <Content2
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: 'https://odinboost.com',
-    }}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Project Overview',
-        description:
-          'Similar to EloHeaven, OdinBoost required a comprehensive gaming services platform with secure payment processing and user management. We delivered a custom web application with seamless transactions, real-time service tracking, and an intuitive user experience that drives customer engagement across multiple gaming titles.',
-      },
-    ]}
-    image={{
-      src: odinImg,
-      alt: 'odinboost website',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        OdinBoost <br /><span class="text-2xl">Gaming Services Platform</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content2>
+  </Features2>
 
   <!-- FAQs Widget ******************* -->
 
